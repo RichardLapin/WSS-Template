@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     62425,       1284]
-NotebookOptionsPosition[     59002,       1214]
-NotebookOutlinePosition[     59816,       1241]
-CellTagsIndexPosition[     59773,       1238]
+NotebookDataLength[     63232,       1294]
+NotebookOptionsPosition[     59808,       1224]
+NotebookOutlinePosition[     60622,       1251]
+CellTagsIndexPosition[     60579,       1248]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1160,48 +1160,58 @@ Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"Grid", "[", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"\"\<\>\"", ",", "cooperate", ",", "defect"}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-      "cooperate", ",", "\"\<win/win\>\"", ",", 
-       "\"\<lose more/win more\>\""}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"defect", ",", 
-       RowBox[{
-        RowBox[{"Style", "[", 
-         RowBox[{"\"\<win more\>\"", ",", "Underlined"}], "]"}], 
-        "\"\</lose more\>\""}], ",", "\"\<lose/lose\>\""}], "}"}]}], "}"}], 
-   ",", 
-   RowBox[{"Dividers", "\[Rule]", 
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"False", ",", "True"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"False", ",", "True"}], "}"}]}], "}"}]}]}], "]"}]], "Input",
- CellChangeTimes->{{3.770631672035921*^9, 3.7706318177374954`*^9}},
- CellLabel->"In[20]:=",ExpressionUUID->"ba4c08b0-eba7-41a0-99b0-7de9b7e82c31"],
+  InterpretationBox[
+   DynamicModuleBox[{Typeset`open = False}, 
+    TemplateBox[{"Expression","SequenceIcon",GridBox[{{
+         RowBox[{
+           TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["Sequence", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["2", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["928", "IconizedItem"]}]}}, 
+       GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+       "Column", 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],Dynamic[
+      Typeset`open]},
+     "IconizedObject"]],
+   Sequence[{{
+     "", $CellContext`cooperate, $CellContext`defect}, \
+{$CellContext`cooperate, "win/win", 
+      "lose more/win more"}, {$CellContext`defect, 
+      Row[{
+        Style["win more", Underlined], "/lose more"}], "lose/lose"}}, 
+    Dividers -> {{False, True}, {False, True}}],
+   SelectWithContents->True,
+   Selectable->False], "]"}]], "Input",
+ CellChangeTimes->{{3.770631672035921*^9, 3.7706318177374954`*^9}, {
+   3.7706320450025015`*^9, 3.770632060463033*^9}, {3.770632129743595*^9, 
+   3.770632134958662*^9}, {3.7706321889536114`*^9, 3.7706321945101295`*^9}, {
+   3.7706323047936077`*^9, 3.77063231601958*^9}, {3.7706323732616777`*^9, 
+   3.770632515509931*^9}, {3.7706328093853393`*^9, 3.7706328560643806`*^9}, 
+   3.7706329051888742`*^9},
+ CellLabel->"In[34]:=",ExpressionUUID->"ba4c08b0-eba7-41a0-99b0-7de9b7e82c31"],
 
 Cell[BoxData[
  TagBox[GridBox[{
     {"\<\"\"\>", "cooperate", "defect"},
     {"cooperate", "\<\"win/win\"\>", "\<\"lose more/win more\"\>"},
     {"defect", 
-     RowBox[{"\<\"/lose more\"\>", " ", 
-      StyleBox["\<\"win more\"\>",
-       StripOnInput->False,
-       FontVariations->{"Underline"->True}]}], "\<\"lose/lose\"\>"}
+     TemplateBox[{
+      StyleBox["\"win more\"", Underlined, StripOnInput -> False],
+       "\"/lose more\""},
+      "RowDefault"], "\<\"lose/lose\"\>"}
    },
    AutoDelete->False,
    GridBoxDividers->{"Columns" -> {False, True}, "Rows" -> {False, True}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
   "Grid"]], "Output",
- CellChangeTimes->{3.7706318185506315`*^9},
- CellLabel->"Out[20]=",ExpressionUUID->"6c3bcc14-9263-4273-8689-65821f715160"]
+ CellChangeTimes->{{3.7706324916711593`*^9, 3.770632516432008*^9}, {
+   3.7706328181075726`*^9, 3.770632857017866*^9}, 3.7706329092564726`*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"09311e16-c742-4d8f-95e6-42e56f138444"]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -1279,10 +1289,10 @@ Cell[56716, 1146, 294, 5, 28, "Input",ExpressionUUID->"3618964e-54e7-4bc1-b053-c
 Cell[57013, 1153, 179, 2, 32, "Output",ExpressionUUID->"1597e633-cc4e-469e-88c8-5bbe7c591347"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[57229, 1160, 935, 26, 48, "Input",ExpressionUUID->"ba4c08b0-eba7-41a0-99b0-7de9b7e82c31"],
-Cell[58167, 1188, 652, 15, 99, "Output",ExpressionUUID->"6c3bcc14-9263-4273-8689-65821f715160"]
+Cell[57229, 1160, 1659, 35, 33, "Input",ExpressionUUID->"ba4c08b0-eba7-41a0-99b0-7de9b7e82c31"],
+Cell[58891, 1197, 734, 16, 99, "Output",ExpressionUUID->"09311e16-c742-4d8f-95e6-42e56f138444"]
 }, Open  ]],
-Cell[58834, 1206, 128, 3, 28, "Input",ExpressionUUID->"c4acbc5f-c6c0-49c1-a006-de81f2797a45"]
+Cell[59640, 1216, 128, 3, 28, "Input",ExpressionUUID->"c4acbc5f-c6c0-49c1-a006-de81f2797a45"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
