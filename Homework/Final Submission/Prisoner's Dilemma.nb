@@ -1,0 +1,2091 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     95165,       2083]
+NotebookOptionsPosition[     88451,       1960]
+NotebookOutlinePosition[     89294,       1988]
+CellTagsIndexPosition[     89251,       1985]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Prisoner\[CloseCurlyQuote]s dilemma", "Title",
+ CellChangeTimes->{{3.770583329737337*^9, 3.7705833486082196`*^9}, 
+   3.770583460190341*^9},ExpressionUUID->"e690464a-c2f3-4087-b73d-\
+e6f43d99c437"],
+
+Cell[TextData[StyleBox["When self-interest of otherwise rational individuals \
+leads to irrational decisions",
+ FontSize->14,
+ FontWeight->"Bold",
+ FontSlant->"Italic",
+ FontColor->GrayLevel[0]]], "Section",
+ CellChangeTimes->{{3.7705835007033443`*^9, 3.770583566681102*^9}, {
+  3.7705836594141936`*^9, 3.77058368712499*^9}, {3.7706635694369497`*^9, 
+  3.77066357052166*^9}, {3.7706637381030583`*^9, 3.7706637400561857`*^9}, {
+  3.77066473262545*^9, 3.7706648141065383`*^9}, {3.7706673532755003`*^9, 
+  3.770667374287645*^9}},ExpressionUUID->"779d0934-1f87-4ffe-a8a8-\
+31805a277783"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Richard \:013dapin, June 28th 2019\t\t\t\t            \
+                                                                              \
+                                                                              \
+                                                                              \
+      Waltham, MA",
+ FontSize->18]], "Section",
+ CellChangeTimes->{{3.7705836354824657`*^9, 3.770583636423696*^9}, {
+   3.770583691868313*^9, 3.770583696209598*^9}, {3.77058373534313*^9, 
+   3.7705837663696766`*^9}, {3.7705838909236884`*^9, 3.770583935988044*^9}, {
+   3.770584499105706*^9, 3.7705844995875845`*^9}, {3.7705847804909906`*^9, 
+   3.770584788101603*^9}, {3.770629279447423*^9, 3.770629279938652*^9}, {
+   3.7706700916299467`*^9, 3.7706700980553427`*^9}, 3.7706778250032015`*^9, {
+   3.7707181196764193`*^9, 3.7707181203911247`*^9}},
+ TextAlignment->Left,ExpressionUUID->"dd45bd5d-e2a5-4e93-93d6-43477103b670"],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True,ExpressionUUID->"24d77be9-d2bb-4dde-aa6f-b0f15dc584e1"],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Subsection",
+ CellChangeTimes->{{3.770586455337329*^9, 
+  3.7705864767712917`*^9}},ExpressionUUID->"f12c0dd8-fc5f-4860-87a0-\
+ad3135998bb2"],
+
+Cell[TextData[{
+ "Instead of copy-pasting the definition from Wikipedia, I will introduce the \
+reader to the basic definition of the problem using the ",
+ StyleBox["WolframAlpha",
+  FontSlant->"Italic"],
+ " command."
+}], "Text",
+ CellChangeTimes->{{3.7705847760714893`*^9, 3.77058480872521*^9}, {
+   3.770584939377348*^9, 3.7705850110730753`*^9}, 3.770666937486166*^9, {
+   3.770667326854359*^9, 
+   3.770667335342745*^9}},ExpressionUUID->"c49fd090-c737-468a-aa50-\
+66a7558c0736"],
+
+Cell[CellGroupData[{
+
+Cell["prisoner's dilemma", "WolframAlphaLong",
+ CellChangeTimes->{{3.7705846388987927`*^9, 3.7705846470043755`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"504273b9-db79-48c8-be55-f507d7c5acfb"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = "prisoner's dilemma", Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, Asynchronous -> All, 
+    TimeConstraint -> {20, Automatic, Automatic, Automatic}, 
+    Method -> {
+     "Formats" -> {"cell", "minput", "msound", "dataformats"}, "Server" -> 
+      "http://api.wolframalpha.com/v1/"}}, Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`pod1$$ = XMLElement[
+   "pod", {"title" -> "Input interpretation", "scanner" -> "Identity", "id" -> 
+     "Input", "position" -> "100", "error" -> "false", "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {"Entity[\"FamousMathGame\", \"PrisonersDilemma\"]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             FormBox[
+              StyleBox[
+               TemplateBox[{
+                 TagBox[
+                  TagBox["\"prisoner's dilemma\"", 
+                   $CellContext`TagBoxWrapper[
+                   "Entity" -> {"FamousMathGame", "PrisonersDilemma"}]], 
+                  Identity], "\" \"", 
+                 StyleBox[
+                  
+                  RowBox[{
+                   "\"(\"", "\[NoBreak]", "\"mathematical game\"", 
+                    "\[NoBreak]", "\")\""}], {
+                   GrayLevel[0.6], 
+                   LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                   0}, StripOnInput -> False]}, "RowDefault"], LineIndent -> 
+               0], TraditionalForm], 
+             PolynomialForm[#, TraditionalOrder -> False]& ], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata"}]}]}], 
+   Typeset`pod2$$ = XMLElement[
+   "pod", {"title" -> "Illustration", "scanner" -> "Data", "id" -> 
+     "ImagePod:FamousMathGame", "position" -> "200", "error" -> "false", 
+     "numsubpods" -> "0", "async" -> 
+     "http://www4d.wolframalpha.com/api/v2/asyncPod.jsp?id=\
+MSPa500614fe00319bb6977300000gdch89f7dc5654e4363898531936319487", 
+     "asyncfailed" -> "data not found"}, {}], Typeset`pod3$$ = XMLElement[
+   "pod", {"title" -> "Statement", "scanner" -> "Data", "id" -> 
+     "StatementPod:FamousMathGame", "position" -> "300", "error" -> "false", 
+     "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "Entity[\"FamousMathGame\", \
+\"PrisonersDilemma\"][EntityProperty[\"FamousMathGame\", \"Statement\"]]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            InterpretationBox[
+             Cell[
+              TextData[{"Each of two prisoners ", 
+                Cell[
+                 BoxData[
+                  FormBox[
+                   FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    "A", PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                " and ", 
+                Cell[
+                 BoxData[
+                  FormBox[
+                   FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    "B", PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                ", who are not allowed to communicate with each other, is \
+offered freedom in exchange for implicating the other. If neither implicates \
+the other, both will receive the usual sentence. However, if the prisoners \
+implicate each other, then both are presumed guilty and granted harsh \
+sentences. A dilemma arises in deciding the best course of action in the \
+absence of knowledge of the other prisoner's decision. Each prisoner's best \
+strategy would appear to be to turn the other in, because in each one's worst\
+\[Hyphen]case assumption that the other will turn him in, remaining silent \
+means staying stuck in jail while the other walks free."}], TextJustification -> 
+              0, Hyphenation -> False, 
+              HyphenationOptions -> {
+               "HyphenationCharacter" -> "\[Hyphen]", "HyphenationFreeZone" -> 
+                0, "HyphenationMinLengths" -> {2, 2}}], 
+             TextCell[
+              Row[{"Each of two prisoners ", 
+                $CellContext`InlineForm["A"], " and ", 
+                $CellContext`InlineForm["B"], 
+                ", who are not allowed to communicate with each other, is \
+offered freedom in exchange for implicating the other. If neither implicates \
+the other, both will receive the usual sentence. However, if the prisoners \
+implicate each other, then both are presumed guilty and granted harsh \
+sentences. A dilemma arises in deciding the best course of action in the \
+absence of knowledge of the other prisoner's decision. Each prisoner's best \
+strategy would appear to be to turn the other in, because in each one's worst\
+\[Hyphen]case assumption that the other will turn him in, remaining silent \
+means staying stuck in jail while the other walks free."}], TextJustification -> 
+              0, Hyphenation -> False, 
+              HyphenationOptions -> {
+               "HyphenationCharacter" -> "\[Hyphen]", "HyphenationFreeZone" -> 
+                0, "HyphenationMinLengths" -> {2, 2}}]], TraditionalForm]], 
+          "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata"}]}]}], 
+   Typeset`pod4$$ = XMLElement[
+   "pod", {"title" -> "Model", "scanner" -> "Data", "id" -> 
+     "ModelsPod:FamousMathGame", "position" -> "400", "error" -> "false", 
+     "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> "Example payoff matrix"}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             TagBox[
+              GridBox[{{
+                 StyleBox["\[Null]", ShowStringCharacters -> False], 
+                 TagBox["\"cooperate\"", HoldForm], 
+                 TagBox["\"defect\"", HoldForm]}, {
+                 TagBox["\"cooperate\"", HoldForm], 
+                 TemplateBox[{"\"win\"", "\", \"", "\"win\""}, "RowDefault"], 
+                 
+                 TemplateBox[{"\"lose more\"", "\", \"", "\"win more\""}, 
+                  "RowDefault"]}, {
+                 TagBox["\"defect\"", HoldForm], 
+                 
+                 TemplateBox[{"\"win more\"", "\", \"", "\"lose more\""}, 
+                  "RowDefault"], 
+                 
+                 TemplateBox[{"\"lose\"", "\", \"", "\"lose\""}, 
+                  "RowDefault"]}}, RowSpacings -> 1, ColumnSpacings -> 3, 
+               RowAlignments -> Baseline, ColumnAlignments -> Center, 
+               ColumnLines -> {1, False}, RowLines -> {1, False}, 
+               ColumnAlignments -> Left], {
+              OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+             Function[BoxForm`e$, 
+              TableForm[
+              BoxForm`e$, 
+               TableHeadings -> {{"cooperate", "defect"}, {
+                 "cooperate", "defect"}}, TableDepth -> 2, 
+               TableAlignments -> {Center, Baseline}]]], TraditionalForm]], 
+          "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {"plaintext,computabledata,formatteddata"}]}]}], 
+   Typeset`pod5$$ = XMLElement[
+   "pod", {
+    "title" -> "History", "scanner" -> "Data", "id" -> 
+     "HistoryPod:FamousMathGame", "position" -> "500", "error" -> "false", 
+     "numsubpods" -> "3"}, {
+     XMLElement["subpod", {"title" -> "Formulation date"}, {
+       XMLElement["microsources", {}, {"\n    ", 
+         XMLElement["microsource", {}, {"PeopleData"}], "\n   "}], 
+       XMLElement[
+       "minput", {}, {
+        "Entity[\"FamousMathGame\", \
+\"PrisonersDilemma\"][EntityProperty[\"FamousMathGame\", \
+\"FormulationDate\"]]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            StyleBox[
+             TemplateBox[{
+               FormBox[
+                TagBox["\"1950\"", Identity], TraditionalForm], "\"  \"", 
+               StyleBox[
+                RowBox[{"\"(\"", "\[NoBreak]", 
+                  TemplateBox[{
+                    StyleBox[
+                    TagBox[
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["69", #& ], "\[InvisibleSpace]", " ", 
+                    StyleBox[
+                    "\"years\"", {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}], Identity], #& , SyntaxForm -> 
+                    Dot], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False], "\" ago\""}, "RowDefault"], 
+                  "\[NoBreak]", "\")\""}], {
+                FontFamily -> "Verdana", FontSize -> 10, 
+                 GrayLevel[0.5], LinebreakAdjustments -> {1, 100, 1, 0, 100}, 
+                 LineIndent -> 0}, StripOnInput -> False]}, "RowDefault"], 
+             LineIndent -> 0], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata"}]}], 
+     XMLElement["subpod", {"title" -> "Formulator"}, {
+       XMLElement["microsources", {}, {"\n    ", 
+         XMLElement["microsource", {}, {"PeopleData"}], "\n   "}], 
+       XMLElement[
+       "minput", {}, {
+        "Entity[\"FamousMathGame\", \
+\"PrisonersDilemma\"][EntityProperty[\"FamousMathGame\", \"Formulators\"]]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            FormBox[
+             TagBox[
+              TagBox["\"Albert W. Tucker\"", 
+               $CellContext`TagBoxWrapper[
+               "Entity" -> {$CellContext`PeopleData, 
+                  "AlbertWTucker::x55r7"}]], Identity], TraditionalForm], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata"}]}], 
+     XMLElement["subpod", {"title" -> "Additional people involved"}, {
+       XMLElement["microsources", {}, {"\n    ", 
+         XMLElement["microsource", {}, {"PeopleData"}], "\n   "}], 
+       XMLElement[
+       "minput", {}, {
+        "Entity[\"FamousMathGame\", \
+\"PrisonersDilemma\"][EntityProperty[\"FamousMathGame\", \
+\"AdditionalPeople\"]]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            StyleBox[
+             RowBox[{
+               FormBox[
+                TagBox[
+                 TagBox["\"Merrill M. Flood\"", 
+                  $CellContext`TagBoxWrapper[
+                  "Entity" -> {$CellContext`PeopleData, 
+                    "MerrillMFlood::7y942"}]], Identity], TraditionalForm], 
+               StyleBox[
+                RowBox[{"\[NoBreak]", 
+                  PaneBox[
+                  "\"  |  \"", BaselinePosition -> Baseline, BaseStyle -> 
+                   GrayLevel[0.6]]}], AutoSpacing -> True], 
+               FormBox[
+                TagBox[
+                 TagBox["\"Melvin Dresher\"", 
+                  $CellContext`TagBoxWrapper[
+                  "Entity" -> {$CellContext`PeopleData, 
+                    "MelvinDresher::7t6w4"}]], Identity], TraditionalForm]}], 
+             LinebreakAdjustments -> {1, 10, 0, 0, 100}, LineIndent -> 0], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata"}]}], 
+     XMLElement["states", {"count" -> "1"}, {
+       XMLElement[
+       "state", {
+        "name" -> "More details", "input" -> 
+         "HistoryPod:FamousMathGame__More details"}, {}]}]}], Typeset`pod6$$ =
+    XMLElement[
+   "pod", {"title" -> "Classes", "scanner" -> "Data", "id" -> 
+     "PropertiesPod:FamousMathGame", "position" -> "600", "error" -> "false", 
+     "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "Entity[\"FamousMathGame\", \
+\"PrisonersDilemma\"][EntityProperty[\"FamousMathGame\", \"Classes\"]]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            StyleBox[
+             RowBox[{"\"imperfect information\"", 
+               StyleBox[
+                RowBox[{"\[NoBreak]", 
+                  PaneBox[
+                  "\"  |  \"", BaselinePosition -> Baseline, BaseStyle -> 
+                   GrayLevel[0.6]]}], AutoSpacing -> True], 
+               "\"nonsequential\"", 
+               StyleBox[
+                RowBox[{"\[NoBreak]", 
+                  PaneBox[
+                  "\"  |  \"", BaselinePosition -> Baseline, BaseStyle -> 
+                   GrayLevel[0.6]]}], AutoSpacing -> True], 
+               "\"nonzero\[Hyphen]sum\"", 
+               StyleBox[
+                RowBox[{"\[NoBreak]", 
+                  PaneBox[
+                  "\"  |  \"", BaselinePosition -> Baseline, BaseStyle -> 
+                   GrayLevel[0.6]]}], AutoSpacing -> True], 
+               "\"two\[Hyphen]player\""}], 
+             LinebreakAdjustments -> {1, 10, 0, 0, 100}, LineIndent -> 0], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata"}]}]}], 
+   Typeset`aux1$$ = {True, False, {False}, True}, Typeset`aux2$$ = {
+   True, False, {False}, True}, Typeset`aux3$$ = {True, False, {False}, True},
+    Typeset`aux4$$ = {True, False, {False}, True}, Typeset`aux5$$ = {
+   True, False, {False, False, False}, True}, Typeset`aux6$$ = {
+   True, False, {False}, True}, Typeset`asyncpods$$ = {}, Typeset`nonpods$$ = {
+    XMLElement["assumptions", {"count" -> "1"}, {
+      XMLElement[
+      "assumption", {
+       "type" -> "Clash", "word" -> "prisoner's dilemma", "template" -> 
+        "Assuming \"${word}\" is ${desc1}. Use as ${desc2} instead", "count" -> 
+        "2"}, {
+        XMLElement[
+        "value", {
+         "name" -> "FamousMathGame", "desc" -> 
+          " referring to a mathematical game", "input" -> 
+          "*C.prisoner%27s+dilemma-_*FamousMathGame-"}, {}], 
+        XMLElement[
+        "value", {
+         "name" -> "MathWorld", "desc" -> 
+          " referring to a mathematical definition", "input" -> 
+          "*C.prisoner%27s+dilemma-_*MathWorld-"}, {}]}]}], 
+    XMLElement["sources", {"count" -> "1"}, {
+      XMLElement[
+      "source", {
+       "url" -> 
+        "http://www.wolframalpha.com/sources/PeopleDataSourceInformationNotes.\
+html", "text" -> "People data"}, {}]}]}, Typeset`initdone$$ = True, 
+   Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> "false", "numpods" -> "6", "datatypes" -> 
+    "FamousMathGame,People", "timedout" -> "", "timedoutpods" -> "", "timing" -> 
+    "0.663", "parsetiming" -> "0.107", "parsetimedout" -> "false", 
+    "recalculate" -> "", "id" -> 
+    "MSPa500414fe00319bb6977300002gh6d57c50g00a5g", "host" -> 
+    "http://www4d.wolframalpha.com", "server" -> "30", "related" -> 
+    "http://www4d.wolframalpha.com/api/v2/relatedQueries.jsp?id=\
+MSPa500514fe00319bb6977300006906e8b711982ccb4363898531936319487", "version" -> 
+    "2.6"}, Typeset`sessioninfo$$ = {
+   "TimeZone" -> -4., 
+    "Date" -> {2019, 6, 27, 9, 2, 45.1557044`9.40728748780276}, "Line" -> 1, 
+    "SessionID" -> 31579760205908026082}, Typeset`showpods$$ = {1, 2, 3, 4, 5,
+    6}, Typeset`failedpods$$ = {2}, Typeset`chosen$$ = {}, Typeset`open$$ = 
+   False, Typeset`newq$$ = "prisoner's dilemma"}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {Typeset`pod1$$, Typeset`pod2$$, Typeset`pod3$$, Typeset`pod4$$, 
+         Typeset`pod5$$, Typeset`pod6$$}, {
+        Typeset`aux1$$, Typeset`aux2$$, Typeset`aux3$$, Typeset`aux4$$, 
+         Typeset`aux5$$, Typeset`aux6$$}, Typeset`chosen$$, Typeset`open$$, 
+        Typeset`elements$$, Typeset`q$$, Typeset`opts$$, Typeset`nonpods$$, 
+        Typeset`queryinfo$$, Typeset`sessioninfo$$, Typeset`showpods$$, 
+        Typeset`failedpods$$, Typeset`newq$$}]], StandardForm],
+    ImageSizeCache->{56., {2., 9.}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     Not[Typeset`initdone$$], Null; WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{
+        Typeset`pod1$$, Typeset`pod2$$, Typeset`pod3$$, Typeset`pod4$$, 
+         Typeset`pod5$$, Typeset`pod6$$}], Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = True],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Print", "WolframAlphaFullOutput",
+ CellChangeTimes->{
+  3.770629365202414*^9},ExpressionUUID->"fadb6317-31e3-4f16-b7f1-\
+fb07026ca4fd"]
+}, Open  ]],
+
+Cell["\<\
+There are 3 crucial assumptions to be made. The players are completely \
+rational, self-interested and they have no means of communication. If they \
+could communicate, the results would most likely be different.
+
+While the game was framed by Merill M. Flood and Melvin Dresher, it was \
+Albert W. Tucker who formalised the game.\
+\>", "Text",
+ CellChangeTimes->{{3.770585056502636*^9, 3.770585117999096*^9}, {
+  3.7705858476424294`*^9, 3.770585908531149*^9}, {3.7706648811892595`*^9, 
+  3.770664902266941*^9}, {3.7706650700845127`*^9, 3.770665084336483*^9}, {
+  3.7706671240469847`*^9, 3.7706671543299465`*^9}, {3.7706672128887424`*^9, 
+  3.7706672865297594`*^9}, {3.770667392794474*^9, 
+  3.770667465751226*^9}},ExpressionUUID->"be3b62e5-3cc6-48cc-9a34-\
+517b8fef3248"],
+
+Cell[CellGroupData[{
+
+Cell["Albert W Tucker image", "WolframAlphaLong",
+ CellChangeTimes->{{3.770585913507518*^9, 3.7705859330113716`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"e5b6aed2-bc3c-492f-bec0-9c184d404be8"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = "Albert W Tucker image", Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, Asynchronous -> All, 
+    TimeConstraint -> {20, Automatic, Automatic, Automatic}, 
+    Method -> {
+     "Formats" -> {"cell", "minput", "msound", "dataformats"}, "Server" -> 
+      "http://api.wolframalpha.com/v1/"}}, Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`pod1$$ = XMLElement[
+   "pod", {"title" -> "Input interpretation", "scanner" -> "Identity", "id" -> 
+     "Input", "position" -> "100", "error" -> "false", "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "Entity[\"Person\", \"AlbertWTucker::x55r7\"][EntityProperty[\"Person\
+\", \"Image\"]]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             FormBox[
+              TagBox[
+               GridBox[{{
+                  PaneBox[
+                   StyleBox[
+                    TagBox[
+                    GridBox[{{
+                    StyleBox[
+                    TagBox[
+                    TagBox["\"Albert W. Tucker\"", 
+                    $CellContext`TagBoxWrapper[
+                    "Entity" -> {$CellContext`PeopleData, 
+                    "AlbertWTucker::x55r7"}]], Identity], {
+                    LineIndent -> 0, LineSpacing -> {0.9, 0, 1.5}}], 
+                    "\"image\""}}, GridBoxBackground -> {"Columns" -> {
+                    GrayLevel[0.949], None}, "Rows" -> {{None}}}, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    ColumnsEqual -> False, RowsEqual -> False, 
+                    GridBoxDividers -> {"Columns" -> {
+                    GrayLevel[0.84], 
+                    GrayLevel[0.84], 
+                    GrayLevel[0.84]}, "Rows" -> {{
+                    GrayLevel[0.84]}}, 
+                    "RowsIndexed" -> {
+                    1 -> GrayLevel[0.84], -1 -> GrayLevel[0.84]}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {1, 1, 1}, "Rows" -> {{0.3}}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Baseline}}}, 
+                    AllowScriptLevelChange -> False, BaselinePosition -> 1], 
+                    $CellContext`TagBoxWrapper["Separator" -> " | "]], 
+                    LineSpacing -> {1, 0, 1.5}, LineIndent -> 0], 
+                   BaselinePosition -> Center]}}, 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                ColumnsEqual -> False, RowsEqual -> False, 
+                GridBoxSpacings -> {"Columns" -> {{
+                    AbsoluteThickness[-1]}}, "Rows" -> {{0}}}, 
+                AllowScriptLevelChange -> False], 
+               $CellContext`TagBoxWrapper["Separator" -> " | "]], 
+              TraditionalForm], 
+             PolynomialForm[#, TraditionalOrder -> False]& ], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata"}]}]}], 
+   Typeset`pod2$$ = XMLElement[
+   "pod", {
+    "title" -> "Result", "scanner" -> "Data", "id" -> "Image:PeopleData", 
+     "position" -> "200", "error" -> "false", "numsubpods" -> "1", "primary" -> 
+     "true"}, {
+     XMLElement["subpod", {"title" -> "", "primary" -> "true"}, {
+       XMLElement[
+       "imagesource", {}, {
+        "https://en.wikipedia.org/wiki/File:Albert_W._Tucker.gif"}], 
+       XMLElement["microsources", {}, {"\n   ", 
+         XMLElement["microsource", {}, {"PeopleData"}], "\n  "}], 
+       XMLElement[
+       "minput", {}, {
+        "Entity[\"Person\", \"AlbertWTucker::x55r7\"][EntityProperty[\"Person\
+\", \"Image\"]]"}], 
+       XMLElement["cell", {"compressed" -> True, "string" -> False}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GraphicsBox[
+              TagBox[
+               RasterBox[CompressedData["
+1:eJydnb+LJ1d2xRcrGDd8A0MHHUwnpqGT6Wwm6EigQIHAgbDXsJFh114LYZBB
+a2QZNtlgIwXLgnAiRQIlggkm6aCT7mCiZpKGSToYUCD0d/i4PrzDqXtf1czu
+g/5S3+r6Vr06de7Pd9+rv//Nf/7jv//NL37xi9/9rT7+8df//cHnn//6f/7p
+7/Tlnz/73aeffPbbf/vos//67Se//fzyN+9p5//q7z/09//b10u7Wdrt0l6+
+fHm723wAG/68u7vLz9xQe/XqVdnIf71j4+D7+3t/suFtH5NnLhd1J73hWzMI
+2W5Gu452E20LH38tQPV2t9t8FwUu35dx6IgZnC24yq/Kfzv45eGWG8kbLIAk
+Vmxof7JuCkg+pgLLFrsSk+ktlHtPiNwSjdy5g0+/0LQbvfP93qckATdxr/Nt
+i0J5xYLS/l3cv1t7/fr1dHun5cn79lvxLOhtAbWlyrrMTtGbXn2KUm5Mb+S+
+UWu6p/+3gDN9NNOL3q+VYT76l2vVVwAsEKXG8/bV0thgpz67JO5QawvDfcTe
+Ctr0+A5av9bW8fn1rpmtHdZtwWjcjKHbX4rY1hP/i/BxK5LrC/mxFhw6Stml
+DrJ/WwAshCwyOzW7iWQBsGO4/1j/OqA6VvlVnVdnvl/a119//ac//enPf/7z
+t99++/z58xcvXiAsd2t73TF8NRP/KQMLkluynCJ8tW5TBuat9Ye7hcy74DY9
+DKYJHyH25Zdffv7555999tmnn376ySef8Kmdf/zjH7/44ovf//73f/jDHwTp
+d999p87rBnu3pzBusbGowYSxy3LnYarHwsAthkz3GJZiTw3a9ABdTn0DNyH2
+q1/96h+W9tFHH3388cf6/NfR9F9BJxi/WJoQ1tevvvpKP/zmm29++OEHwASB
+LelIJKdSvEVCY5h2pPvSU+GdwpVQTJEphyWMbEM5SaW4JHB++ctfgpvaBx98
+wPb777//4Ycf/stoIp4EWcdrQ9BJtIWkaCkqar8+vx9NX4Vn8qHA2JVhN807
+JNyi4pbqKzAmYonJDlxdeNVD0Ua3L/SElRATVoLu/aVpW3uEKnzTMYityKZP
+oadPcY8NUNXnV0tDbQIjN3W/IcUdQyQi6ZefNPMtkewM3OLblF3ZHh4eOnT5
+9EFPDJEMSjaFHnB9GE2yLNX38Wj6KgzRh0JSPxTykBAeSrS/Xpq+6r/akFoQ
+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
+KkvFpZ+LA0wTyLmi4Pl/DD/a1Q==
+                "], {{0, 150}, {107, 0}}, {0, 255}, ColorFunction -> 
+                RGBColor], 
+               BoxForm`ImageTag[
+               "Byte", ColorSpace -> "RGB", Interleaving -> True], Selectable -> 
+               False], DefaultBaseStyle -> "ImageGraphics", 
+              ImageSizeRaw -> {107, 150}, PlotRange -> {{0, 107}, {0, 150}}], 
+             Annotation[#, {
+              "URL" -> 
+               "http://www.wolframcdn.com/waimage/hset028/982/\
+982d498061f3e909644de0d1ffbec4db_v001s.gif", "Dimensions" -> {107, 150}, 
+               "Source" -> 
+               "https://en.wikipedia.org/wiki/File:Albert_W._Tucker.gif", 
+               "Popup" -> 
+               "hset028/982/982d498061f3e909644de0d1ffbec4db_v001ms.gif", 
+               "MaxWidth" -> "MaxWidth", "MaxHeight" -> "MaxHeight"}, 
+              "Image"]& ], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {"minput,computabledata,formatteddata"}]}]}], 
+   Typeset`aux1$$ = {True, False, {False}, True}, Typeset`aux2$$ = {
+   True, False, {False}, True}, Typeset`asyncpods$$ = {}, Typeset`nonpods$$ = {
+    XMLElement["sources", {"count" -> "1"}, {
+      XMLElement[
+      "source", {
+       "url" -> 
+        "http://www.wolframalpha.com/sources/PeopleDataSourceInformationNotes.\
+html", "text" -> "People data"}, {}]}]}, Typeset`initdone$$ = True, 
+   Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> "false", "numpods" -> "2", "datatypes" -> 
+    "People", "timedout" -> "", "timedoutpods" -> "", "timing" -> "1.387", 
+    "parsetiming" -> "1.16", "parsetimedout" -> "false", "recalculate" -> "", 
+    "id" -> "MSPa263111h7fi182f6bf8ch00005d80d691af5g3i13", "host" -> 
+    "http://www4d.wolframalpha.com", "server" -> "36", "related" -> 
+    "http://www4d.wolframalpha.com/api/v2/relatedQueries.jsp?id=\
+MSPa263211h7fi182f6bf8ch00006551315ifb47hi031407772552395848436", "version" -> 
+    "2.6"}, Typeset`sessioninfo$$ = {
+   "TimeZone" -> -4., 
+    "Date" -> {2019, 6, 27, 9, 2, 55.5166652`9.496998209979958}, "Line" -> 2, 
+    "SessionID" -> 31579760205908026082}, Typeset`showpods$$ = {1, 2}, 
+   Typeset`failedpods$$ = {}, Typeset`chosen$$ = {}, Typeset`open$$ = False, 
+   Typeset`newq$$ = "Albert W Tucker image"}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {Typeset`pod1$$, Typeset`pod2$$}, {Typeset`aux1$$, Typeset`aux2$$}, 
+        Typeset`chosen$$, Typeset`open$$, Typeset`elements$$, Typeset`q$$, 
+        Typeset`opts$$, Typeset`nonpods$$, Typeset`queryinfo$$, 
+        Typeset`sessioninfo$$, Typeset`showpods$$, Typeset`failedpods$$, 
+        Typeset`newq$$}]], StandardForm],
+    ImageSizeCache->{1171., {158., 164.}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     Not[Typeset`initdone$$], Null; WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{Typeset`pod1$$, Typeset`pod2$$}], Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = True],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Print", "WolframAlphaFullOutput",
+ CellChangeTimes->{
+  3.7706293755379972`*^9},ExpressionUUID->"2bd49139-727f-49dd-b1ee-\
+bbab8fde47b7"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Solving the generalised form of game", "Subsection",
+ CellChangeTimes->{{3.7705865185969343`*^9, 3.7705865222769203`*^9}, {
+  3.770586797165496*^9, 
+  3.7705868094891467`*^9}},ExpressionUUID->"d41d8c47-91ec-4436-b81e-\
+9c911d421ea9"],
+
+Cell["\<\
+As seen in the example model above, the generalised form of game is following:\
+\>", "Text",
+ CellChangeTimes->{{3.770628017370082*^9, 3.770628066331172*^9}, {
+   3.7706281456924496`*^9, 3.770628154968433*^9}, 
+   3.770663815727059*^9},ExpressionUUID->"b037d108-6b1e-455a-9520-\
+774fc67a6824"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  InterpretationBox[
+   DynamicModuleBox[{Typeset`open = False}, 
+    TemplateBox[{"Expression","SequenceIcon",GridBox[{{
+         RowBox[{
+           TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["Sequence", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["2", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["960", "IconizedItem"]}]}}, 
+       GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+       "Column", 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],Dynamic[
+      Typeset`open]},
+     "IconizedObject"]],
+   Sequence[{{"", 
+      Style[$CellContext`cooperate, Bold], 
+      Style[$CellContext`defect, Bold]}, {
+      Style[$CellContext`cooperate, Bold], "win/win", "lose more/win more"}, {
+      Style[$CellContext`defect, Bold], "win more/lose more", "lose/lose"}}, 
+    Dividers -> {{False, True}, {False, True}}],
+   SelectWithContents->True,
+   Selectable->False], "]"}]], "Input",
+ CellChangeTimes->{{3.7706282070602036`*^9, 3.770628278639383*^9}, {
+   3.770628322851988*^9, 3.770628393603978*^9}, {3.7706284650785675`*^9, 
+   3.7706285277329865`*^9}, {3.7706285696855316`*^9, 3.770628755369779*^9}, {
+   3.770628787589037*^9, 3.770628788449686*^9}, 3.7706288298823233`*^9, {
+   3.7706351551472406`*^9, 3.7706352534720774`*^9}, {3.7706352983848743`*^9, 
+   3.770635366790156*^9}},
+ CellLabel->"In[92]:=",ExpressionUUID->"35f66a03-53fe-4933-a0dd-0c4b2726a605"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"\"\>", 
+     StyleBox["cooperate",
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox["defect",
+      StripOnInput->False,
+      FontWeight->Bold]},
+    {
+     StyleBox["cooperate",
+      StripOnInput->False,
+      FontWeight->Bold], "\<\"win/win\"\>", "\<\"lose more/win more\"\>"},
+    {
+     StyleBox["defect",
+      StripOnInput->False,
+      FontWeight->Bold], "\<\"win more/lose more\"\>", "\<\"lose/lose\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxDividers->{"Columns" -> {False, True}, "Rows" -> {False, True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.770635254062069*^9, {3.770635320407462*^9, 3.770635338719555*^9}, 
+   3.770635370184151*^9},
+ CellLabel->"Out[92]=",ExpressionUUID->"a99bdd71-febe-487a-adeb-4039f14aa36e"]
+}, Open  ]],
+
+Cell[TextData[{
+ "where ",
+ StyleBox["win more > win > lose > lose more. ",
+  FontSlant->"Italic"],
+ "I will define these properties below:"
+}], "Text",
+ CellChangeTimes->{{3.7706288469707236`*^9, 3.770628894581662*^9}, 
+   3.7706289288663816`*^9, {3.7706295703228683`*^9, 3.770629607020236*^9}, {
+   3.7706651147833433`*^9, 
+   3.770665120945798*^9}},ExpressionUUID->"2883288d-dec7-49cb-aa86-\
+07fd70630162"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"$Assumptions", "=", 
+  RowBox[{"winMore", ">", "win", ">", "lose", ">", "loseMore"}]}]], "Input",
+ CellChangeTimes->{{3.770631107847888*^9, 3.770631148475999*^9}, {
+  3.770646590914212*^9, 3.770646601270169*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"921fdd6e-d963-4197-a734-b04a0d02d994"],
+
+Cell[BoxData[
+ RowBox[{"winMore", ">", "win", ">", "lose", ">", "loseMore"}]], "Output",
+ CellChangeTimes->{3.7706311490104423`*^9, 3.7706466043114696`*^9},
+ CellLabel->"Out[30]=",ExpressionUUID->"c2858e10-6918-4c94-b562-765bd31b3e85"]
+}, Open  ]],
+
+Cell[TextData[{
+ "The solution to the game can be found using several methods. I am going to \
+do so using the \[OpenCurlyDoubleQuote]underlining method\
+\[CloseCurlyDoubleQuote]. A player chooses the best response action, that \
+maximises their utility, while holding the action of the other player fixed. \
+Let\[CloseCurlyQuote]s start with the row player. If we fix the column player\
+\[CloseCurlyQuote]s action to ",
+ StyleBox["cooperate",
+  FontWeight->"Bold"],
+ ", the row player faces a maximisation problem by having to decide whether \
+to ",
+ StyleBox["cooperate",
+  FontWeight->"Bold"],
+ " or ",
+ StyleBox["defect",
+  FontWeight->"Bold"],
+ ". Therefore, in this instance, the row faces a hypothetical choice between \
+the payoff ",
+ StyleBox["win ",
+  FontSlant->"Italic"],
+ "and ",
+ StyleBox["win more",
+  FontSlant->"Italic"],
+ ". Running this simple optimisation problem we get:"
+}], "Text",
+ CellChangeTimes->{{3.7706314830384564`*^9, 3.770631517986018*^9}, {
+   3.7706347285980387`*^9, 3.7706348141278524`*^9}, {3.770634849408526*^9, 
+   3.7706348623200035`*^9}, {3.770634972894696*^9, 3.7706350798195524`*^9}, {
+   3.770635113876582*^9, 3.7706351445617423`*^9}, {3.7706359134489355`*^9, 
+   3.770635947772032*^9}, {3.770635980327024*^9, 3.7706360610789547`*^9}, {
+   3.7706638351824784`*^9, 3.770663854118598*^9}, {3.7706638954694943`*^9, 
+   3.770663914443384*^9}, {3.770663965303501*^9, 3.770663976071389*^9}, {
+   3.7706640492212286`*^9, 3.7706640494408283`*^9}, {3.770664172350342*^9, 
+   3.770664235573781*^9}, {3.7706643584147253`*^9, 3.770664369285157*^9}, 
+   3.7706651423038206`*^9},ExpressionUUID->"2523cbb8-0f7f-4da0-88eb-\
+b9dceff10c75"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{"Max", "[", 
+   RowBox[{"win", ",", "winMore"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.770655641910308*^9, 3.770655685524506*^9}, {
+  3.770663940553236*^9, 3.7706639508647575`*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"0972e109-b54d-4a4f-a0cc-7ffe2a5f0e67"],
+
+Cell[BoxData["winMore"], "Output",
+ CellChangeTimes->{{3.7706556665852737`*^9, 3.7706556860922117`*^9}, 
+   3.770663951921667*^9},
+ CellLabel->"Out[52]=",ExpressionUUID->"66d8e08f-33c3-40a6-8c9a-7c2cbc92d921"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Thus the row player\[CloseCurlyQuote]s best response (when the column \
+player chooses to ",
+ StyleBox["cooperate",
+  FontWeight->"Bold"],
+ ") is to ",
+ StyleBox["defect",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.770636121790556*^9, 3.770636213247467*^9}, {
+  3.7706643752788906`*^9, 
+  3.7706643755024185`*^9}},ExpressionUUID->"1603a065-1a95-4bf1-b18c-\
+3a375fa9024a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  InterpretationBox[
+   DynamicModuleBox[{Typeset`open = False}, 
+    TemplateBox[{"Expression","SequenceIcon",GridBox[{{
+         RowBox[{
+           TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["Sequence", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["2", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["1160", "IconizedItem"]}]}}, 
+       GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+       "Column", 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],Dynamic[
+      Typeset`open]},
+     "IconizedObject"]],
+   Sequence[{{"", 
+      Style[$CellContext`cooperate, Bold, Red], 
+      Style[$CellContext`defect, Bold]}, {
+      Style[$CellContext`cooperate, Bold], "win/win", "lose more/win more"}, {
+      Style[$CellContext`defect, Bold], 
+      Row[{
+        Style["win more", Underlined], "/lose more"}], "lose/lose"}}, 
+    Dividers -> {{False, True}, {False, True}}],
+   SelectWithContents->True,
+   Selectable->False], "]"}]], "Input",
+ CellChangeTimes->{{3.770631672035921*^9, 3.7706318177374954`*^9}, {
+   3.7706320450025015`*^9, 3.770632060463033*^9}, {3.770632129743595*^9, 
+   3.770632134958662*^9}, {3.7706321889536114`*^9, 3.7706321945101295`*^9}, {
+   3.7706323047936077`*^9, 3.77063231601958*^9}, {3.7706323732616777`*^9, 
+   3.770632515509931*^9}, {3.7706328093853393`*^9, 3.7706328560643806`*^9}, 
+   3.7706329051888742`*^9, {3.770634695368498*^9, 3.7706347150103292`*^9}, {
+   3.7706353755479345`*^9, 3.770635398987918*^9}, 3.7706354508232813`*^9, {
+   3.770635617614818*^9, 3.770635622316889*^9}, 3.770635659606061*^9},
+ CellLabel->"In[53]:=",ExpressionUUID->"ba4c08b0-eba7-41a0-99b0-7de9b7e82c31"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"\"\>", 
+     StyleBox["cooperate",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontWeight->Bold,
+      FontColor->RGBColor[1, 0, 0]], 
+     StyleBox["defect",
+      StripOnInput->False,
+      FontWeight->Bold]},
+    {
+     StyleBox["cooperate",
+      StripOnInput->False,
+      FontWeight->Bold], "\<\"win/win\"\>", "\<\"lose more/win more\"\>"},
+    {
+     StyleBox["defect",
+      StripOnInput->False,
+      FontWeight->Bold], 
+     TemplateBox[{
+      StyleBox["\"win more\"", Underlined, StripOnInput -> False],
+       "\"/lose more\""},
+      "RowDefault"], "\<\"lose/lose\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxDividers->{"Columns" -> {False, True}, "Rows" -> {False, True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.7706353848137426`*^9, 3.770635399752015*^9}, 
+   3.770635481864705*^9, 3.7706356231548624`*^9, 3.770635662332403*^9, 
+   3.770664449629566*^9},
+ CellLabel->"Out[53]=",ExpressionUUID->"502e25cf-0843-4aa9-9f68-1523dbe8010f"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Now we have to find the remaining best responses. Fixing the column player\
+\[CloseCurlyQuote]s action to ",
+ StyleBox["defect",
+  FontWeight->"Bold"],
+ ", we solve a similar optimisation problem."
+}], "Text",
+ CellChangeTimes->{
+  3.770631677961958*^9, {3.7706362198805075`*^9, 3.770636259081986*^9}, {
+   3.770636558018499*^9, 3.770636566523923*^9}, {3.7706643945086946`*^9, 
+   3.770664420483299*^9}},ExpressionUUID->"c4acbc5f-c6c0-49c1-a006-\
+de81f2797a45"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{"Max", "[", 
+   RowBox[{"lose", ",", "loseMore"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.770636589581874*^9, 3.770636595738141*^9}, {
+  3.7706367244140253`*^9, 3.7706367585719213`*^9}, {3.7706466155574737`*^9, 
+  3.7706466167330647`*^9}, {3.7706529288337317`*^9, 3.7706529705039883`*^9}, {
+  3.770664427120002*^9, 3.770664455437584*^9}},
+ CellLabel->"In[54]:=",ExpressionUUID->"29d43fb1-f187-46ba-9191-e9b5222e64c5"],
+
+Cell[BoxData["lose"], "Output",
+ CellChangeTimes->{3.770664455902876*^9},
+ CellLabel->"Out[54]=",ExpressionUUID->"c39b1bd3-137f-42ad-bc56-d0a65a578a50"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Once again, the row player chooses to ",
+ StyleBox["defect",
+  FontWeight->"Bold"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.7706644768311677`*^9, 
+  3.770664499482422*^9}},ExpressionUUID->"adcfa9ef-de87-4687-a431-\
+9e7ad342b59f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  InterpretationBox[
+   DynamicModuleBox[{Typeset`open = False}, 
+    TemplateBox[{"Expression","SequenceIcon",GridBox[{{
+         RowBox[{
+           TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["Sequence", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["2", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["1344", "IconizedItem"]}]}}, 
+       GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+       "Column", 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],Dynamic[
+      Typeset`open]},
+     "IconizedObject"]],
+   Sequence[{{"", 
+      Style[$CellContext`cooperate, Bold], 
+      Style[$CellContext`defect, Bold, Red]}, {
+      Style[$CellContext`cooperate, Bold], "win/win", "lose more/win more"}, {
+      Style[$CellContext`defect, Bold], 
+      Row[{
+        Style["win more", Underlined], "/lose more"}], 
+      Row[{
+        Style["lose", Underlined], "/lose"}]}}, 
+    Dividers -> {{False, True}, {False, True}}],
+   SelectWithContents->True,
+   Selectable->False], "]"}]], "Input",
+ CellChangeTimes->{{3.7706544778533278`*^9, 3.77065448690396*^9}, {
+   3.770654522214069*^9, 3.770654528929907*^9}, 3.7706551587222767`*^9},
+ CellLabel->"In[47]:=",ExpressionUUID->"d89ace33-596f-4cde-95c3-2a1dfc11cc90"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"\"\>", 
+     StyleBox["cooperate",
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox["defect",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontWeight->Bold,
+      FontColor->RGBColor[1, 0, 0]]},
+    {
+     StyleBox["cooperate",
+      StripOnInput->False,
+      FontWeight->Bold], "\<\"win/win\"\>", "\<\"lose more/win more\"\>"},
+    {
+     StyleBox["defect",
+      StripOnInput->False,
+      FontWeight->Bold], 
+     TemplateBox[{
+      StyleBox["\"win more\"", Underlined, StripOnInput -> False],
+       "\"/lose more\""},
+      "RowDefault"], 
+     TemplateBox[{
+      StyleBox["\"lose\"", Underlined, StripOnInput -> False],"\"/lose\""},
+      "RowDefault"]}
+   },
+   AutoDelete->False,
+   GridBoxDividers->{"Columns" -> {False, True}, "Rows" -> {False, True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.7706544874525394`*^9, 3.7706545297954845`*^9, 
+  3.7706551830947123`*^9},
+ CellLabel->"Out[47]=",ExpressionUUID->"dda53851-af4c-4bfd-9a8d-62daa3174fa1"]
+}, Open  ]],
+
+Cell[TextData[{
+ "As the row player chooses to ",
+ StyleBox["defect",
+  FontWeight->"Bold"],
+ " in both cases, ",
+ StyleBox["defect",
+  FontWeight->"Bold"],
+ " dominates ",
+ StyleBox["cooperate",
+  FontWeight->"Bold"],
+ ". Thus under this scenario, the row player never chooses to ",
+ StyleBox["cooperate",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.770664617656226*^9, 3.770664624738275*^9}, {
+  3.770664669058182*^9, 3.7706647217303987`*^9}, {3.7706652077500734`*^9, 
+  3.770665253153999*^9}, {3.770667709012491*^9, 
+  3.770667711193512*^9}},ExpressionUUID->"1a65c28e-7877-4296-b3ea-\
+5be8cc9aafdf"],
+
+Cell[TextData[{
+ "Even though the actions and payoffs of players are symmetric (thus the \
+optimisation problems yield the same results and I could skip them \
+altogether),  for the purpose of staying neat and linear, I will carry out \
+the optimisation for the column player as well.\nHolding the row player\
+\[CloseCurlyQuote]s action ",
+ StyleBox["cooperate",
+  FontWeight->"Bold"],
+ " fixed, the column player chooses between the payoff of ",
+ StyleBox["win ",
+  FontSlant->"Italic"],
+ "and ",
+ StyleBox["win more",
+  FontSlant->"Italic"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.7706652651751165`*^9, 3.770665302042404*^9}, {
+  3.7706653507803087`*^9, 3.7706654227658796`*^9}, {3.77066548042062*^9, 
+  3.7706654985669765`*^9}, {3.7706655388357396`*^9, 3.7706656995905056`*^9}, {
+  3.7706666136167793`*^9, 3.7706666634871025`*^9}, {3.7706677372245827`*^9, 
+  3.7706677397031174`*^9}, {3.7707186349308643`*^9, 
+  3.770718637009675*^9}},ExpressionUUID->"fdbb503e-1f2d-43c1-91c8-\
+d3da59c9f58e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{"Max", "[", 
+   RowBox[{"win", ",", "winMore"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7706657063964357`*^9, 3.770665713325754*^9}},
+ CellLabel->"In[55]:=",ExpressionUUID->"c8e94e2d-02de-4ff7-bf0a-32a69abc03f7"],
+
+Cell[BoxData["winMore"], "Output",
+ CellChangeTimes->{3.7706657143322563`*^9},
+ CellLabel->"Out[55]=",ExpressionUUID->"080d8b78-97cd-4d86-b11e-4bc09f9289b5"]
+}, Open  ]],
+
+Cell[TextData[{
+ "By optimising, the player chooses to ",
+ StyleBox["defect",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.7706668166848335`*^9, 
+  3.7706668368423324`*^9}},ExpressionUUID->"a64eafd7-8472-4f0c-8c4b-\
+c222f8bfea65"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  InterpretationBox[
+   DynamicModuleBox[{Typeset`open = False}, 
+    TemplateBox[{"Expression","SequenceIcon",GridBox[{{
+         RowBox[{
+           TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["Sequence", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["2", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["1536", "IconizedItem"]}]}}, 
+       GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+       "Column", 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],Dynamic[
+      Typeset`open]},
+     "IconizedObject"]],
+   Sequence[{{"", 
+      Style[$CellContext`cooperate, Bold], 
+      Style[$CellContext`defect, Bold]}, {
+      Style[$CellContext`cooperate, Bold, Red], "win/win", 
+      Row[{"lose more/", 
+        Style["win more", Underlined]}]}, {
+      Style[$CellContext`defect, Bold], 
+      Row[{
+        Style["win more", Underlined], "/lose more"}], 
+      Row[{
+        Style["lose", Underlined], "/lose"}]}}, 
+    Dividers -> {{False, True}, {False, True}}],
+   SelectWithContents->True,
+   Selectable->False], "]"}]], "Input",
+ CellChangeTimes->{{3.770654573732506*^9, 3.7706547106967106`*^9}, 
+   3.7706551699180937`*^9, {3.7707538558409595`*^9, 
+   3.770753883835238*^9}},ExpressionUUID->"1baca9e2-5a53-4c18-949c-\
+f57067aeb679"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"\"\>", 
+     StyleBox["cooperate",
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox["defect",
+      StripOnInput->False,
+      FontWeight->Bold]},
+    {
+     StyleBox["cooperate",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontWeight->Bold,
+      FontColor->RGBColor[1, 0, 0]], "\<\"win/win\"\>", 
+     TemplateBox[{
+      "\"lose more/\"",StyleBox[
+       "\"win more\"", Underlined, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     StyleBox["defect",
+      StripOnInput->False,
+      FontWeight->Bold], 
+     TemplateBox[{
+      StyleBox["\"win more\"", Underlined, StripOnInput -> False],
+       "\"/lose more\""},
+      "RowDefault"], 
+     TemplateBox[{
+      StyleBox["\"lose\"", Underlined, StripOnInput -> False],"\"/lose\""},
+      "RowDefault"]}
+   },
+   AutoDelete->False,
+   GridBoxDividers->{"Columns" -> {False, True}, "Rows" -> {False, True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.7706547039369907`*^9, 3.770654711248275*^9}, 
+   3.7706551849639072`*^9},
+ CellLabel->"Out[48]=",ExpressionUUID->"26ba699d-1852-4e76-9d47-961c8ce24809"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{"Max", "[", 
+   RowBox[{"loseMore", ",", "lose"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.770666890511236*^9, 3.7706668976050806`*^9}},
+ CellLabel->"In[56]:=",ExpressionUUID->"02df652f-6d98-4de4-9082-f0e48efa774a"],
+
+Cell[BoxData["lose"], "Output",
+ CellChangeTimes->{3.770666898294012*^9},
+ CellLabel->"Out[56]=",ExpressionUUID->"cd2ca3f2-527a-4dd4-a728-ae144866395c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  InterpretationBox[
+   DynamicModuleBox[{Typeset`open = False}, 
+    TemplateBox[{"Expression","SequenceIcon",GridBox[{{
+         RowBox[{
+           TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["Sequence", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["2", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["1504", "IconizedItem"]}]}}, 
+       GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+       "Column", 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],Dynamic[
+      Typeset`open]},
+     "IconizedObject"]],
+   Sequence[{{"", 
+      Style[$CellContext`cooperate, Bold], 
+      Style[$CellContext`defect, Bold]}, {
+      Style[$CellContext`cooperate, Bold], "win/win", 
+      Row[{"lose more/", 
+        Style["win more", Underlined]}]}, {
+      Style[$CellContext`defect, Bold, Red], 
+      Row[{
+        Style["win more", Underlined], "/lose more"}], 
+      Row[{
+        Style["lose/lose", Underlined]}]}}, 
+    Dividers -> {{False, True}, {False, True}}],
+   SelectWithContents->True,
+   Selectable->False], "]"}]], "Input",
+ CellChangeTimes->{{3.7706547463279896`*^9, 3.770654773651889*^9}, 
+   3.770655175412512*^9, {3.770753865181348*^9, 
+   3.7707538741444874`*^9}},ExpressionUUID->"cf870bef-8da3-4368-8ea8-\
+322dba3fc7fb"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"\"\>", 
+     StyleBox["cooperate",
+      StripOnInput->False,
+      FontWeight->Bold], 
+     StyleBox["defect",
+      StripOnInput->False,
+      FontWeight->Bold]},
+    {
+     StyleBox["cooperate",
+      StripOnInput->False,
+      FontWeight->Bold], "\<\"win/win\"\>", 
+     TemplateBox[{
+      "\"lose more/\"",StyleBox[
+       "\"win more\"", Underlined, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     StyleBox["defect",
+      StripOnInput->False,
+      LineColor->RGBColor[1, 0, 0],
+      FrontFaceColor->RGBColor[1, 0, 0],
+      BackFaceColor->RGBColor[1, 0, 0],
+      GraphicsColor->RGBColor[1, 0, 0],
+      FontWeight->Bold,
+      FontColor->RGBColor[1, 0, 0]], 
+     TemplateBox[{
+      StyleBox["\"win more\"", Underlined, StripOnInput -> False],
+       "\"/lose more\""},
+      "RowDefault"], 
+     TemplateBox[{
+      StyleBox["\"lose/lose\"", Underlined, StripOnInput -> False]},
+      "RowDefault"]}
+   },
+   AutoDelete->False,
+   GridBoxDividers->{"Columns" -> {False, True}, "Rows" -> {False, True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.7706547270848107`*^9, 3.770654774169695*^9}, 
+   3.7706551869261494`*^9},
+ CellLabel->"Out[49]=",ExpressionUUID->"2f332d3c-9244-46d8-a401-8b4da6a2212c"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Therefore we observe that ",
+ StyleBox["defect ",
+  FontWeight->"Bold"],
+ "is a dominant strategy for both individuals and so each individual will end \
+up with a utility ",
+ StyleBox["lose",
+  FontWeight->"Bold"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.770654797103345*^9, 3.770654887649562*^9}, {
+  3.7706549277638316`*^9, 3.770654992337816*^9}, {3.7706550831406126`*^9, 
+  3.7706551327229757`*^9}},ExpressionUUID->"36dc5397-2306-4515-ad43-\
+951c50fe94ef"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Solve your own game!", "Subsection",
+ CellChangeTimes->{{3.7706772661754823`*^9, 
+  3.770677281141364*^9}},ExpressionUUID->"37d91b82-a31c-491c-a149-\
+4560ea6a8d74"],
+
+Cell[TextData[{
+ "Below I have defined a simple Nash equilibria finder. The strategy chosen \
+by each player is the one that brings them the highest expected utility.\n\
+Please insert the parameter values in the form ",
+ StyleBox["{{a,b},{c,d}}",
+  FontSlant->"Italic"],
+ " for each player (for a game with 2 strategies). However, the finder works \
+for an infinite number of strategies (as long as the number is the same for \
+both players)! The function returns the position of the Nash equilibrium."
+}], "Text",
+ CellChangeTimes->{{3.7706766010529876`*^9, 3.770676634160248*^9}, {
+  3.7706771729845743`*^9, 3.77067719857742*^9}, {3.770677473669318*^9, 
+  3.7706775131419554`*^9}, {3.7706775711571755`*^9, 3.77067768898209*^9}, {
+  3.7706777699770455`*^9, 3.770677812487939*^9}, {3.770677845565798*^9, 
+  3.7706778527332726`*^9}, {3.770677903723801*^9, 3.7706779531663666`*^9}, {
+  3.770678159551679*^9, 3.770678289651336*^9}, {3.770678355612836*^9, 
+  3.7706783731272783`*^9}, {3.7707186565275345`*^9, 3.770718686516779*^9}, {
+  3.770752192784545*^9, 
+  3.770752194479477*^9}},ExpressionUUID->"d1230e63-e5e4-4733-8d15-\
+ff0d673542ad"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"solveGame", "[", 
+    RowBox[{"p1_", ",", "p2_"}], "]"}], ":=", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+     RowBox[{"Ordering", "[", 
+      RowBox[{
+       RowBox[{"Mean", "/@", "p1"}], ",", 
+       RowBox[{"-", "1"}]}], "]"}], ",", 
+     RowBox[{"Ordering", "[", 
+      RowBox[{
+       RowBox[{"Mean", "/@", "p2"}], ",", 
+       RowBox[{"-", "1"}]}], "]"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7706752402648134`*^9, 3.7706752944850693`*^9}, {
+   3.770675342418519*^9, 3.770675342754886*^9}, {3.770675544057088*^9, 
+   3.7706755873436604`*^9}, {3.7706757001118903`*^9, 3.770675729575266*^9}, {
+   3.7706763810081453`*^9, 3.7706763824549503`*^9}, 3.770676526943757*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"b37e5b43-610d-4b95-9587-598de7fd138d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FormPage", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\"\<P1\>\"", "\[Rule]", "\"\<Expression\>\""}], ",", 
+     RowBox[{"\"\<P2\>\"", "\[Rule]", "\"\<Expression\>\""}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{"solveGame", "[", 
+     RowBox[{
+      RowBox[{"#", "[", "\"\<P1\>\"", "]"}], ",", 
+      RowBox[{"#", "[", "\"\<P2\>\"", "]"}]}], "]"}], "&"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.770752014020113*^9, 3.7707520230148816`*^9}, {
+  3.7707521660133457`*^9, 3.7707522499856887`*^9}, {3.770752867518228*^9, 
+  3.770752874436431*^9}, {3.770752919884331*^9, 3.770752998506395*^9}, {
+  3.770753035804406*^9, 3.770753180705323*^9}, {3.7707533462063017`*^9, 
+  3.770753407546378*^9}, {3.7707536115973854`*^9, 3.770753628339831*^9}, {
+  3.7707537146727195`*^9, 3.770753778554473*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"7ece2521-55d3-48fc-9517-3cf5bff4c990"],
+
+Cell[BoxData[
+ InterpretationBox[
+  DynamicModuleBox[{Forms`FormPage`PackagePrivate`temp$$ = Association[
+   "P1" -> Association["Interpreter" -> "Expression", "Input" -> ""], "P2" -> 
+    Association["Interpreter" -> "Expression", "Input" -> ""]], 
+   Forms`FormPage`PackagePrivate`vals$$ = Association[], 
+   Forms`FormPage`PackagePrivate`valid$$ = False, 
+   Forms`FormPage`PackagePrivate`form2$$ = FormObject[
+    Association[
+    "P1" -> Association["Interpreter" -> "Expression"], "P2" -> 
+     Association["Interpreter" -> "Expression"]], 
+    Association[]], Forms`FormPage`PackagePrivate`valid2$$}, 
+   DynamicBox[ToBoxes[
+     With[{Forms`FormPage`PackagePrivate`formpane$ = Panel[
+         Forms`getFormLayout[
+          Forms`PackageScope`bindableForm[
+          Forms`FormPage`PackagePrivate`temp$$, 
+           Evaluate[Forms`FormPage`PackagePrivate`form2$$], None, None -> 
+           Forms`PackageScope`completeAction[
+            Forms`FormPage`PackagePrivate`form2$$, 
+             Forms`FormPage`PackagePrivate`temp$$, 
+             Forms`FormPage`PackagePrivate`vals$$, (
+             Unset[Forms`FormPage`PackagePrivate`vals$$]; 
+             Forms`FormPage`PackagePrivate`vals$$ = #; 
+             Forms`FormPage`PackagePrivate`valid2$$ = Not[
+                TrueQ[Forms`PackageScope`$DontComplete]])& , {}]]]], 
+       Forms`FormPage`PackagePrivate`resultpane$ = Framed[
+         If[
+         Forms`FormPage`PackagePrivate`valid$$ = 
+          And[Forms`FormPage`PackagePrivate`vals$$ =!= Association[], 
+            FreeQ[
+             Values[Forms`FormPage`PackagePrivate`vals$$], 
+             Alternatives[
+              Blank[Failure], Forms`PackageScope`fieldHidden]], 
+            TrueQ[Forms`FormPage`PackagePrivate`valid2$$]], 
+          Unset[Forms`FormPage`PackagePrivate`valid2$$]; Style[
+            ($CellContext`solveGame[
+             #["P1"], 
+             #["P2"]]& )[Forms`FormPage`PackagePrivate`vals$$], "Output", 
+            "StandardForm"], 
+          Style["Invalid form", "Message"]], FrameStyle -> Lighter[Gray], 
+         Background -> White]}, 
+      Panel[
+       Column[
+        Forms`doLayout[
+        Automatic, Forms`FormPage`PackagePrivate`valid$$, {
+         Forms`FormPage`PackagePrivate`formpane$, 
+          Forms`FormPage`PackagePrivate`resultpane$, 
+          Panel[
+           Item[
+            Row[{
+              Spacer[0], 
+              DefaultButton[
+               Forms`PackageScope`completeAction[
+               Forms`FormPage`PackagePrivate`form2$$, 
+                Forms`FormPage`PackagePrivate`temp$$, 
+                Forms`FormPage`PackagePrivate`vals$$, (
+                Unset[Forms`FormPage`PackagePrivate`vals$$]; 
+                Forms`FormPage`PackagePrivate`vals$$ = #; 
+                Forms`FormPage`PackagePrivate`valid2$$ = Not[
+                   TrueQ[Forms`PackageScope`$DontComplete]])& , {}]]}], 
+            Alignment -> Right]]}]]]], StandardForm],
+    ImageSizeCache->{298., {82., 89.}},
+    TrackedSymbols:>{Forms`FormPage`PackagePrivate`vals$$}],
+   DynamicModuleValues:>{}],
+  FormPage[
+   FormObject[
+    Association[
+    "P1" -> Association["Interpreter" -> "Expression"], "P2" -> 
+     Association["Interpreter" -> "Expression"]], 
+    Association[]], $CellContext`solveGame[
+    #["P1"], 
+    #["P2"]]& ],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.770753149214223*^9, 3.7707531813438435`*^9, 
+  3.7707534081648927`*^9, 3.770753632332165*^9, 3.7707537809847355`*^9, 
+  3.770761904044301*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"6a9226dc-2893-449f-8255-96ebb0e19f67"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The prisoner\[CloseCurlyQuote]s dilemma in popular culture", \
+"Subsection",
+ CellChangeTimes->{{3.7706784015581913`*^9, 
+  3.770678413531348*^9}},ExpressionUUID->"6524dfc6-ab2f-4e72-bd89-\
+529fa834afbf"],
+
+Cell[TextData[{
+ "There are/were several TV shows, where the prisoner\[CloseCurlyQuote]s \
+dilemma type of game (or related) was implemented.  In the US, for instance, \
+these were ",
+ StyleBox["Friend or Foe?",
+  FontSlant->"Italic"],
+ ", ",
+ StyleBox["Bachelor Pad",
+  FontSlant->"Italic"],
+ ",",
+ StyleBox[" Take It All",
+  FontSlant->"Italic"],
+ ". The UK equivalents were ",
+ StyleBox["Trust Me",
+  FontSlant->"Italic"],
+ " and ",
+ StyleBox["Golden Balls",
+  FontSlant->"Italic"],
+ ".\nThe Wikipedia definition below summarises the general premise of these \
+games pretty well."
+}], "Text",
+ CellChangeTimes->{{3.7706787810505557`*^9, 3.7706788048744583`*^9}, {
+  3.7706788685632825`*^9, 3.770678903366634*^9}, {3.7706789397428975`*^9, 
+  3.7706790030471845`*^9}, {3.7706790623907948`*^9, 3.7706791500967255`*^9}, {
+  3.770718283765021*^9, 3.77071829284233*^9}, {3.7707194205342855`*^9, 
+  3.770719459024184*^9}},ExpressionUUID->"8b73451b-22e7-4d2d-8170-\
+3c5f03f81978"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Snippet", "[", 
+  RowBox[{
+   RowBox[{"WikipediaData", "[", "\"\<Friend or Foe? (game show)\>\"", "]"}], 
+   ",", "4"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7707188113938093`*^9, 3.770718818602894*^9}, {
+  3.7707188511732717`*^9, 3.770718896247659*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"3843e3ca-f885-4e33-9c32-d76c9fd9deed"],
+
+Cell[BoxData["\<\"Friend or Foe? is an American game show based on knowledge \
+and trust which aired\\non Game Show Network. Three teams of two strangers \
+attempted to persuade their\\npartner into sharing their accumulated winnings \
+rather than stealing it for\\nthemselves.\"\>"], "Output",
+ CellChangeTimes->{{3.770718864712493*^9, 3.7707188973579173`*^9}},
+ CellLabel->"Out[21]=",ExpressionUUID->"d6e44e30-a7ca-4301-97d8-e68c5bdea880"]
+}, Open  ]],
+
+Cell["\<\
+These shows provided a good opportunity for the analysis of participants\
+\[CloseCurlyQuote] behaviour. \
+\>", "Text",
+ CellChangeTimes->{{3.77071911708803*^9, 3.7707191229824276`*^9}, {
+   3.7707191965929003`*^9, 3.7707192129959173`*^9}, 3.7707193100260696`*^9, {
+   3.7707509459620776`*^9, 3.770751027117278*^9}, {3.7707513954736753`*^9, 
+   3.770751398918411*^9}},ExpressionUUID->"3971d662-025c-4c54-b9f7-\
+b273d2faaedc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Snippet", "[", 
+   RowBox[{
+    RowBox[{"WikipediaData", "[", "\"\<Golden Balls\>\"", "]"}], ",", 
+    RowBox[{"33", ";;", "40"}]}], "]"}], "\n"}]], "Input",
+ CellChangeTimes->{{3.7707192370871005`*^9, 3.770719287706154*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"dd465b0f-1048-4634-80d4-2ed61f0f22cc"],
+
+Cell[BoxData["\<\"== Scientific research ==\\nGolden Balls has attracted \
+attention from social scientists as a natural experiment on cooperation. A \
+team of economists including Richard Thaler have analysed the decisions of \
+the final contestants and found, among other things, the \
+following:\\n\\nIndividual players on average choose \\\"split\\\" 53 percent \
+of the time.\\nContestants' propensity to cooperate is surprisingly high for \
+amounts that would normally be considered consequential but look tiny in \
+their current context, what the authors label a \[OpenCurlyDoubleQuote]big \
+peanuts\[CloseCurlyDoubleQuote] phenomenon.\\nContestants are less likely to \
+cooperate if their opponent has tried to vote them off the show in the first \
+two rounds of the game, which is in line with the notion that people have an \
+intrinsic preference for reciprocity.\\nThere is little evidence that \
+contestants\[CloseCurlyQuote] propensity to cooperate depends positively on \
+the likelihood that their opponent will cooperate (i.e., they find little \
+evidence for conditional cooperation).\\nYoung males are less cooperative \
+than young females, but this gender effect reverses for older contestants \
+since men become increasingly more cooperative as their age increases.\"\>"], \
+"Output",
+ CellChangeTimes->{{3.7707192174458685`*^9, 3.770719288862558*^9}},
+ CellLabel->"Out[31]=",ExpressionUUID->"0baa82df-66e2-4cc6-b58a-e38782870bbb"]
+}, Open  ]],
+
+Cell["\<\
+The results are rather surprising - what exactly causes the increase of the \
+degree of cooperation as the age increases in men?\
+\>", "Text",
+ CellChangeTimes->{{3.7707514018921947`*^9, 3.7707514225189867`*^9}, {
+  3.7707514859132543`*^9, 
+  3.7707515037309003`*^9}},ExpressionUUID->"5d5f1a57-fd77-45e0-a260-\
+fe538073fbd4"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1264, 637},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+DockedCells->{
+  Cell[
+   TextData[{
+     StyleBox["  WOLFRAM ", 
+      RGBColor[0.97, 0.83, 0.35], FontFamily -> "Source Sans Pro", FontWeight -> 
+      Bold, FontSize -> 40], 
+     StyleBox["SUMMER SCHOOL", 
+      GrayLevel[1], FontFamily -> "Source Sans Pro", FontSize -> 40], 
+     StyleBox[" 2019", 
+      RGBColor[0.97, 0.83, 0.35], FontFamily -> "Source Sans Pro", FontSize -> 
+      40]}], CellFrameMargins -> 10, Background -> 
+   RGBColor[0.12, 0.14, 0.15]]},
+Magnification:>1.1 Inherited,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 11, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 203, 3, 107, "Title",ExpressionUUID->"e690464a-c2f3-4087-b73d-e6f43d99c437"],
+Cell[786, 27, 583, 11, 53, "Section",ExpressionUUID->"779d0934-1f87-4ffe-a8a8-31805a277783"],
+Cell[CellGroupData[{
+Cell[1394, 42, 943, 13, 71, "Section",ExpressionUUID->"dd45bd5d-e2a5-4e93-93d6-43477103b670"],
+Cell[2340, 57, 99, 1, 4, "PageBreak",ExpressionUUID->"24d77be9-d2bb-4dde-aa6f-b0f15dc584e1",
+ PageBreakBelow->True],
+Cell[CellGroupData[{
+Cell[2464, 62, 162, 3, 59, "Subsection",ExpressionUUID->"f12c0dd8-fc5f-4860-87a0-ad3135998bb2"],
+Cell[2629, 67, 481, 11, 39, "Text",ExpressionUUID->"c49fd090-c737-468a-aa50-66a7558c0736"],
+Cell[CellGroupData[{
+Cell[3135, 82, 194, 2, 46, "WolframAlphaLong",ExpressionUUID->"504273b9-db79-48c8-be55-f507d7c5acfb"],
+Cell[3332, 86, 24852, 505, 23, "Print",ExpressionUUID->"fadb6317-31e3-4f16-b7f1-fb07026ca4fd"]
+}, Open  ]],
+Cell[28199, 594, 781, 14, 115, "Text",ExpressionUUID->"be3b62e5-3cc6-48cc-9a34-517b8fef3248"],
+Cell[CellGroupData[{
+Cell[29005, 612, 195, 2, 46, "WolframAlphaLong",ExpressionUUID->"e5b6aed2-bc3c-492f-bec0-9c184d404be8"],
+Cell[29203, 616, 24437, 436, 332, "Print",ExpressionUUID->"2bd49139-727f-49dd-b1ee-bbab8fde47b7"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53689, 1058, 239, 4, 59, "Subsection",ExpressionUUID->"d41d8c47-91ec-4436-b81e-9c911d421ea9"],
+Cell[53931, 1064, 303, 6, 39, "Text",ExpressionUUID->"b037d108-6b1e-455a-9520-774fc67a6824"],
+Cell[CellGroupData[{
+Cell[54259, 1074, 1677, 34, 38, "Input",ExpressionUUID->"35f66a03-53fe-4933-a0dd-0c4b2726a605"],
+Cell[55939, 1110, 871, 25, 73, "Output",ExpressionUUID->"a99bdd71-febe-487a-adeb-4039f14aa36e"]
+}, Open  ]],
+Cell[56825, 1138, 409, 10, 39, "Text",ExpressionUUID->"2883288d-dec7-49cb-aa86-07fd70630162"],
+Cell[CellGroupData[{
+Cell[57259, 1152, 315, 5, 32, "Input",ExpressionUUID->"921fdd6e-d963-4197-a734-b04a0d02d994"],
+Cell[57577, 1159, 235, 3, 36, "Output",ExpressionUUID->"c2858e10-6918-4c94-b562-765bd31b3e85"]
+}, Open  ]],
+Cell[57827, 1165, 1665, 35, 115, "Text",ExpressionUUID->"2523cbb8-0f7f-4da0-88eb-b9dceff10c75"],
+Cell[CellGroupData[{
+Cell[59517, 1204, 323, 6, 32, "Input",ExpressionUUID->"0972e109-b54d-4a4f-a0cc-7ffe2a5f0e67"],
+Cell[59843, 1212, 209, 3, 36, "Output",ExpressionUUID->"66d8e08f-33c3-40a6-8c9a-7c2cbc92d921"]
+}, Open  ]],
+Cell[60067, 1218, 408, 13, 39, "Text",ExpressionUUID->"1603a065-1a95-4bf1-b18c-3a375fa9024a"],
+Cell[CellGroupData[{
+Cell[60500, 1235, 1926, 38, 38, "Input",ExpressionUUID->"ba4c08b0-eba7-41a0-99b0-7de9b7e82c31"],
+Cell[62429, 1275, 1217, 34, 73, "Output",ExpressionUUID->"502e25cf-0843-4aa9-9f68-1523dbe8010f"]
+}, Open  ]],
+Cell[63661, 1312, 479, 11, 39, "Text",ExpressionUUID->"c4acbc5f-c6c0-49c1-a006-de81f2797a45"],
+Cell[CellGroupData[{
+Cell[64165, 1327, 479, 8, 32, "Input",ExpressionUUID->"29d43fb1-f187-46ba-9191-e9b5222e64c5"],
+Cell[64647, 1337, 152, 2, 36, "Output",ExpressionUUID->"c39b1bd3-137f-42ad-bc56-d0a65a578a50"]
+}, Open  ]],
+Cell[64814, 1342, 247, 8, 39, "Text",ExpressionUUID->"adcfa9ef-de87-4687-a431-9e7ad342b59f"],
+Cell[CellGroupData[{
+Cell[65086, 1354, 1516, 34, 38, "Input",ExpressionUUID->"d89ace33-596f-4cde-95c3-2a1dfc11cc90"],
+Cell[66605, 1390, 1242, 36, 73, "Output",ExpressionUUID->"dda53851-af4c-4bfd-9a8d-62daa3174fa1"]
+}, Open  ]],
+Cell[67862, 1429, 620, 19, 39, "Text",ExpressionUUID->"1a65c28e-7877-4296-b3ea-5be8cc9aafdf"],
+Cell[68485, 1450, 995, 22, 90, "Text",ExpressionUUID->"fdbb503e-1f2d-43c1-91c8-d3da59c9f58e"],
+Cell[CellGroupData[{
+Cell[69505, 1476, 274, 5, 32, "Input",ExpressionUUID->"c8e94e2d-02de-4ff7-bf0a-32a69abc03f7"],
+Cell[69782, 1483, 157, 2, 36, "Output",ExpressionUUID->"080d8b78-97cd-4d86-b11e-4bc09f9289b5"]
+}, Open  ]],
+Cell[69954, 1488, 247, 8, 39, "Text",ExpressionUUID->"a64eafd7-8472-4f0c-8c4b-c222f8bfea65"],
+Cell[CellGroupData[{
+Cell[70226, 1500, 1547, 37, 38, "Input",ExpressionUUID->"1baca9e2-5a53-4c18-949c-f57067aeb679"],
+Cell[71776, 1539, 1347, 40, 73, "Output",ExpressionUUID->"26ba699d-1852-4e76-9d47-961c8ce24809"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73160, 1584, 276, 5, 32, "Input",ExpressionUUID->"02df652f-6d98-4de4-9082-f0e48efa774a"],
+Cell[73439, 1591, 152, 2, 36, "Output",ExpressionUUID->"cd2ca3f2-527a-4dd4-a728-ae144866395c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73628, 1598, 1541, 37, 38, "Input",ExpressionUUID->"cf870bef-8da3-4368-8ea8-322dba3fc7fb"],
+Cell[75172, 1637, 1340, 40, 73, "Output",ExpressionUUID->"2f332d3c-9244-46d8-a401-8b4da6a2212c"]
+}, Open  ]],
+Cell[76527, 1680, 477, 13, 39, "Text",ExpressionUUID->"36dc5397-2306-4515-ad43-951c50fe94ef"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77041, 1698, 170, 3, 59, "Subsection",ExpressionUUID->"37d91b82-a31c-491c-a149-4560ea6a8d74"],
+Cell[77214, 1703, 1137, 19, 90, "Text",ExpressionUUID->"d1230e63-e5e4-4733-8d15-ff0d673542ad"],
+Cell[78354, 1724, 807, 19, 32, "Input",ExpressionUUID->"b37e5b43-610d-4b95-9587-598de7fd138d"],
+Cell[CellGroupData[{
+Cell[79186, 1747, 907, 18, 32, "Input",ExpressionUUID->"7ece2521-55d3-48fc-9517-3cf5bff4c990"],
+Cell[80096, 1767, 3634, 79, 192, "Output",ExpressionUUID->"6a9226dc-2893-449f-8255-96ebb0e19f67"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[83779, 1852, 210, 4, 59, "Subsection",ExpressionUUID->"6524dfc6-ab2f-4e72-bd89-529fa834afbf"],
+Cell[83992, 1858, 975, 26, 90, "Text",ExpressionUUID->"8b73451b-22e7-4d2d-8170-3c5f03f81978"],
+Cell[CellGroupData[{
+Cell[84992, 1888, 359, 7, 32, "Input",ExpressionUUID->"3843e3ca-f885-4e33-9c32-d76c9fd9deed"],
+Cell[85354, 1897, 441, 5, 103, "Output",ExpressionUUID->"d6e44e30-a7ca-4301-97d8-e68c5bdea880"]
+}, Open  ]],
+Cell[85810, 1905, 434, 8, 39, "Text",ExpressionUUID->"3971d662-025c-4c54-b9f7-b273d2faaedc"],
+Cell[CellGroupData[{
+Cell[86269, 1917, 339, 7, 55, "Input",ExpressionUUID->"dd465b0f-1048-4634-80d4-2ed61f0f22cc"],
+Cell[86611, 1926, 1450, 19, 301, "Output",ExpressionUUID->"0baa82df-66e2-4cc6-b58a-e38782870bbb"]
+}, Open  ]],
+Cell[88076, 1948, 335, 7, 39, "Text",ExpressionUUID->"5d5f1a57-fd77-45e0-a260-fe538073fbd4"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
