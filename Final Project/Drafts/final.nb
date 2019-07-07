@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[     18875,        480]
-NotebookOptionsPosition[     17908,        455]
-NotebookOutlinePosition[     18252,        470]
-CellTagsIndexPosition[     18209,        467]
+NotebookDataLength[     19372,        486]
+NotebookOptionsPosition[     18500,        462]
+NotebookOutlinePosition[     18843,        477]
+CellTagsIndexPosition[     18800,        474]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -406,22 +406,30 @@ Cell[BoxData[
    3.771498993284053*^9}, {3.7714992459552193`*^9, 3.7714992483857613`*^9}, {
    3.771500085613017*^9, 3.771500089241826*^9}, {3.7715005382649508`*^9, 
    3.7715005896345015`*^9}, {3.7715010094903407`*^9, 3.771501017919798*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"bfe71dbe-fa72-4e63-a601-f59e4363aa63"],
+ CellLabel->"In[2]:=",ExpressionUUID->"bfe71dbe-fa72-4e63-a601-f59e4363aa63"],
 
 Cell[BoxData[
  RowBox[{"Cartogram", "[", 
   RowBox[{
    NamespaceBox["LinguisticAssistant",
-    DynamicModuleBox[{Typeset`query$$ = "Southeast Asia", Typeset`boxes$$ = 
-     TemplateBox[{"\"Southeast Asia\"", 
+    DynamicModuleBox[{Typeset`query$$ = "South America", Typeset`boxes$$ = 
+     TemplateBox[{"\"South America\"", 
        RowBox[{"EntityClass", "[", 
-         RowBox[{"\"Country\"", ",", "\"SoutheastAsia\""}], "]"}], 
-       "\"EntityClass[\\\"Country\\\", \\\"SoutheastAsia\\\"]\"", 
-       "\"countries\""}, "EntityClass"], Typeset`allassumptions$$ = {}, 
+         RowBox[{"\"Country\"", ",", "\"SouthAmerica\""}], "]"}], 
+       "\"EntityClass[\\\"Country\\\", \\\"SouthAmerica\\\"]\"", 
+       "\"countries\""}, "EntityClass"], 
+     Typeset`allassumptions$$ = {{
+      "type" -> "Clash", "word" -> "South America", "template" -> 
+       "Assuming \"${word}\" is ${desc1}. Use as ${desc2} instead", "count" -> 
+       "2", "Values" -> {{
+         "name" -> "CountryClass", "desc" -> "a class of countries", "input" -> 
+          "*C.South+America-_*CountryClass-"}, {
+         "name" -> "GeographicRegion", "desc" -> "a continent", "input" -> 
+          "*C.South+America-_*GeographicRegion-"}}}}, 
      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
      Typeset`querystate$$ = {
      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-      0.5726731`7.209451777105303, "Messages" -> {}}}, 
+      0.6588444`7.270327852398735, "Messages" -> {}}}, 
      DynamicBox[ToBoxes[
        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
         Dynamic[Typeset`query$$], 
@@ -430,7 +438,7 @@ Cell[BoxData[
         Dynamic[Typeset`assumptions$$], 
         Dynamic[Typeset`open$$], 
         Dynamic[Typeset`querystate$$]], StandardForm],
-      ImageSizeCache->{204., {7., 17.}},
+      ImageSizeCache->{227., {7., 17.}},
       TrackedSymbols:>{
        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
@@ -439,22 +447,21 @@ Cell[BoxData[
     BaseStyle->{"Deploy"},
     DeleteWithContents->True,
     Editable->False,
-    SelectWithContents->True], ",", 
-   RowBox[{"{", "100", "}"}]}], "]"}]], "Input",
+    SelectWithContents->True], ",", "300", ",", 
+   RowBox[{"{", "40", "}"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.771501304796579*^9, 3.771501317895542*^9}, {
   3.7715031254591494`*^9, 3.771503127119856*^9}, {3.7715034644575214`*^9, 
-  3.771503493061968*^9}, {3.77150420484978*^9, 3.771504243242174*^9}},
- CellLabel->"In[2]:=",ExpressionUUID->"fb5afe62-45ac-41e1-b840-539d8f693479"],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.771503443494548*^9, 
-  3.7715034618026257`*^9}},ExpressionUUID->"a6ea0744-8239-48c8-8dd7-\
-ec162fae2ccb"]
+  3.771503493061968*^9}, {3.77150420484978*^9, 3.771504243242174*^9}, {
+  3.7715091544382653`*^9, 3.771509155850341*^9}, {3.7715094435426083`*^9, 
+  3.7715094706481075`*^9}, {3.7715097356824675`*^9, 3.7715097373274927`*^9}, {
+  3.771510054785469*^9, 3.7715100594112797`*^9}, {3.771510265607188*^9, 
+  3.771510334466411*^9}, {3.7715106068003397`*^9, 3.771510625283852*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"fb5afe62-45ac-41e1-b840-539d8f693479"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1280, 637},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{1264, 637},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 11, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -478,8 +485,7 @@ Cell[937, 34, 394, 9, 34, "Text",ExpressionUUID->"14b67eba-1b28-4fc4-9a0a-18aba6
 Cell[CellGroupData[{
 Cell[1368, 48, 168, 6, 69, "Subsubsection",ExpressionUUID->"50edd4ae-68e1-4230-a5eb-07131d8c0fe7"],
 Cell[1539, 56, 14452, 352, 519, "Code",ExpressionUUID->"bfe71dbe-fa72-4e63-a601-f59e4363aa63"],
-Cell[15994, 410, 1729, 36, 41, "Input",ExpressionUUID->"fb5afe62-45ac-41e1-b840-539d8f693479"],
-Cell[17726, 448, 154, 3, 28, "Input",ExpressionUUID->"a6ea0744-8239-48c8-8dd7-ec162fae2ccb"]
+Cell[15994, 410, 2478, 48, 41, "Input",ExpressionUUID->"fb5afe62-45ac-41e1-b840-539d8f693479"]
 }, Open  ]]
 }, Open  ]]
 }
