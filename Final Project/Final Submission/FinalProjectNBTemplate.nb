@@ -10,35 +10,36 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2508,         74]
-NotebookOptionsPosition[      1520,         44]
-NotebookOutlinePosition[      2344,         72]
-CellTagsIndexPosition[      2301,         69]
+NotebookDataLength[      2611,         74]
+NotebookOptionsPosition[      1634,         45]
+NotebookOutlinePosition[      2447,         72]
+CellTagsIndexPosition[      2404,         69]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["< Project Title >", "Title",
+Cell["Cartogram Function\t", "Title",
  CellChangeTimes->{{3.770055572438499*^9, 3.7700555729498453`*^9}, {
-  3.770055604008165*^9, 
-  3.7700556066618843`*^9}},ExpressionUUID->"49ab34ee-bfd5-49f5-beef-\
+  3.770055604008165*^9, 3.7700556066618843`*^9}, {3.771594944008543*^9, 
+  3.7715949539379807`*^9}},ExpressionUUID->"49ab34ee-bfd5-49f5-beef-\
 400d3cc456dd"],
 
-Cell["< First and Last name>", "Text",
+Cell["Richard Lapin\t", "Text",
  CellChangeTimes->{{3.549624168509506*^9, 3.549624171985794*^9}, {
   3.549624508772977*^9, 3.549624510775043*^9}, {3.5498187159613867`*^9, 
   3.5498187170087957`*^9}, {3.549819049020514*^9, 3.5498190533440437`*^9}, {
-  3.77005561844785*^9, 
-  3.7700556489651537`*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
+  3.77005561844785*^9, 3.7700556489651537`*^9}, {3.7715949563106337`*^9, 
+  3.771594958512782*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
 fa93ec9acae9"],
 
-Cell["< Mentor\[CloseCurlyQuote]s First and Last name>", "Text",
+Cell["Christopher Wolfram", "Text",
  CellChangeTimes->{{3.549624515773694*^9, 3.5496245246892014`*^9}, {
   3.5498187208956137`*^9, 3.5498187221413403`*^9}, {3.5498190558319674`*^9, 
-  3.54981906151682*^9}, {3.770055624686027*^9, 
-  3.770055659820487*^9}},ExpressionUUID->"b70c649b-a958-4202-9f22-\
+  3.54981906151682*^9}, {3.770055624686027*^9, 3.770055659820487*^9}, {
+  3.7715949608196144`*^9, 
+  3.771594966450508*^9}},ExpressionUUID->"b70c649b-a958-4202-9f22-\
 238ea1f9c7d4"]
 }, Open  ]]
 },
@@ -56,8 +57,7 @@ DockedCells->{
       RGBColor[0.97, 0.83, 0.35], FontFamily -> "Source Sans Pro", FontSize -> 
       40]}], CellFrameMargins -> 10, Background -> 
    RGBColor[0.12, 0.14, 0.15]]},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 11, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -72,9 +72,9 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 213, 4, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
-Cell[796, 28, 364, 6, 35, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
-Cell[1163, 36, 341, 5, 35, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"]
+Cell[580, 22, 264, 4, 96, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
+Cell[847, 28, 405, 6, 34, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
+Cell[1255, 36, 363, 6, 34, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"]
 }, Open  ]]
 }
 ]
