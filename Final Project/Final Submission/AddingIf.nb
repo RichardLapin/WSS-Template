@@ -1,0 +1,547 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[     24474,        539]
+NotebookOptionsPosition[     23927,        521]
+NotebookOutlinePosition[     24299,        537]
+CellTagsIndexPosition[     24256,        534]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Cartogram", "[", 
+     RowBox[{
+      RowBox[{"geoPolysi", ":", 
+       RowBox[{"{", "__Rule", "}"}]}], ",", 
+      RowBox[{"numberOfIterations_:", "30"}], ",", 
+      RowBox[{"res_:", "100"}], ",", " ", 
+      RowBox[{
+       RowBox[{"plotAll_", "?", "BooleanQ_:"}], "False"}]}], "]"}], ":=", 
+    "\n", "    ", 
+    RowBox[{"Module", " ", "[", "\n", "        ", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "regions", ",", "masks", ",", "map", ",", "mapPairs", ",", 
+        "population", ",", "numberOfCells", ",", "cellDensity", ",", "gPairs",
+         ",", "geoPolys"}], "}"}], ",", "\n", "        ", "\n", "        ", 
+      RowBox[{
+       RowBox[{"geoPolys", " ", "=", " ", 
+        RowBox[{"Keys", "[", "geoPolysi", "]"}]}], ";", "\n", "        ", 
+       "\n", "        ", 
+       RowBox[{"regions", " ", "=", " ", 
+        RowBox[{"Range", "[", 
+         RowBox[{"Length", "[", 
+          RowBox[{"EntityValue", "[", 
+           RowBox[{"geoPolys", ",", "\"\<Polygon\>\""}], "]"}], "]"}], 
+         "]"}]}], ";", "\n", "        ", "\n", "        ", 
+       RowBox[{"map", " ", "=", " ", 
+        RowBox[{"(", "\n", "            ", 
+         RowBox[{
+          RowBox[{"masks", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"Function", " ", "[", "\n", "                ", 
+             RowBox[{"poly", ",", " ", 
+              RowBox[{"ImageData", " ", "[", "\n", "                    ", 
+               RowBox[{
+                RowBox[{"Binarize", " ", "@", " ", 
+                 RowBox[{
+                 "Rasterize", " ", "[", "\n", "                        ", 
+                  RowBox[{
+                   RowBox[{
+                   "Style", " ", "[", "\n", "                            ", 
+                    RowBox[{
+                    RowBox[{
+                    "Graphics", " ", "[", "\n", 
+                    "                                ", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"White", ",", " ", 
+                    RowBox[{"MeshPrimitives", "[", 
+                    RowBox[{
+                    RowBox[{"DiscretizeGraphics", " ", "@", " ", "poly"}], 
+                    ",", " ", "2"}], "]"}]}], "}"}], ",", "\n", 
+                    "                                ", 
+                    RowBox[{"Background", " ", "->", " ", "Black"}], ",", 
+                    "\n", "                                ", 
+                    RowBox[{"PlotRange", " ", "->", " ", 
+                    RowBox[{"Reverse", " ", "@", " ", 
+                    RowBox[{
+                    "GeoBounds", " ", "[", "\n", 
+                    "                                    ", 
+                    RowBox[{"EntityValue", "[", 
+                    RowBox[{"geoPolys", ",", "\"\<Polygon\>\""}], "]"}], "\n",
+                     "                                    ", "]"}]}]}]}], 
+                    "\n", "                                ", "]"}], ",", 
+                    "\n", "                            ", 
+                    RowBox[{"Antialiasing", " ", "->", " ", "False"}]}], "\n",
+                     "                        ", "]"}], ",", "\n", 
+                   "                        ", 
+                   RowBox[{"RasterSize", " ", "->", " ", "res"}]}], "\n", 
+                  "                    ", "]"}]}], ",", "\n", 
+                "                    ", "\"\<Bit\>\""}], "\n", 
+               "                ", "]"}]}], "\n", "            ", "]"}], " ", 
+            "/@", " ", 
+            RowBox[{"EntityValue", "[", 
+             RowBox[{"geoPolys", ",", " ", "\"\<Polygon\>\""}], "]"}]}]}], 
+          ";", "\n", "\n", "            ", 
+          RowBox[{"Fold", " ", "[", "\n", "                ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#1", " ", "+", " ", 
+              RowBox[{"Clip", " ", "[", "\n", "                        ", 
+               RowBox[{
+                RowBox[{"#2", "-", 
+                 RowBox[{"(", 
+                  RowBox[{"#2", "*", "#1"}], ")"}]}], ",", "\n", 
+                "                        ", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "Infinity"}], "}"}]}], "\n", 
+               "                    ", "]"}]}], "&"}], ",", "\n", 
+            "                    ", 
+            RowBox[{"MapIndexed", " ", "[", "\n", "                        ", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#1", " ", "*", " ", 
+                RowBox[{"First", "[", "#2", "]"}]}], "&"}], ",", "\n", 
+              "                        ", "masks"}], "\n", 
+             "                    ", "]"}]}], "\n", "            ", "]"}]}], 
+         "\n", "        ", ")"}]}], ";", "\n", "    ", "\n", "        ", 
+       RowBox[{"mapPairs", " ", "=", " ", 
+        RowBox[{"BlockMap", " ", "[", "\n", "            ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", "\n", "                ", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"2", ",", "2"}], "]"}], "]"}], ",", "\n", 
+             "                ", 
+             RowBox[{
+              RowBox[{"3", "*", 
+               RowBox[{"Count", " ", "[", "\n", "                    ", 
+                RowBox[{
+                 RowBox[{
+                 "Position", " ", "[", "\n", "                        ", 
+                  RowBox[{
+                   RowBox[{"Flatten", "[", "#", "]"}], ",", "\n", 
+                   "                        ", 
+                   RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"2", ",", "2"}], "]"}], "]"}]}], "\n", 
+                  "                    ", "]"}], ",", "\n", 
+                 "                    ", 
+                 RowBox[{"_", "?", "EvenQ"}], ",", "\n", 
+                 "                    ", "2"}], "\n", "                ", 
+                "]"}]}], " ", "+", " ", 
+              RowBox[{"Count", " ", "[", "\n", "                    ", 
+               RowBox[{
+                RowBox[{
+                "Position", " ", "[", "\n", "                        ", 
+                 RowBox[{
+                  RowBox[{"Flatten", "[", "#", "]"}], ",", "\n", 
+                  "                        ", 
+                  RowBox[{"#", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"2", ",", "2"}], "]"}], "]"}]}], "\n", 
+                 "                    ", "]"}], ",", "\n", 
+                "                    ", 
+                RowBox[{"_", "?", "OddQ"}], ",", "\n", "                    ",
+                 "2"}], "\n", "                ", "]"}], " ", "-", "1"}]}], 
+            " ", "\n", "            ", "}"}], "&"}], ",", "\n", 
+          "            ", 
+          RowBox[{"ArrayPad", "[", 
+           RowBox[{"map", ",", " ", "1", ",", " ", "0"}], "]"}], ",", " ", 
+          "\n", "            ", 
+          RowBox[{"{", 
+           RowBox[{"3", ",", " ", "3"}], "}"}], ",", " ", "\n", 
+          "            ", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", " ", "1"}], "}"}]}], "\n", "        ", "]"}]}], 
+       ";", "\n", "\n", "        ", 
+       RowBox[{"population", " ", "=", " ", 
+        RowBox[{"QuantityMagnitude", "[", 
+         RowBox[{"Values", "[", "geoPolysi", "]"}], "]"}]}], ";", "\n", "\n", 
+       "        ", 
+       RowBox[{"numberOfCells", " ", "=", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"Count", "[", 
+            RowBox[{"map", ",", " ", "#", ",", " ", "2"}], "]"}], ")"}], " ", 
+          "&"}], " ", "/@", " ", 
+         RowBox[{"Range", "[", 
+          RowBox[{"Length", "[", 
+           RowBox[{"EntityList", "[", "geoPolys", "]"}], "]"}], "]"}]}]}], 
+       ";", "\n", "       ", "\n", "        ", 
+       RowBox[{"cellDensity", " ", "=", " ", 
+        RowBox[{"N", "[", 
+         RowBox[{"Prepend", "[", 
+          RowBox[{
+           RowBox[{"population", " ", "/", " ", "numberOfCells"}], ",", " ", 
+           "0"}], "]"}], "]"}]}], ";", "\n", "        ", "\n", "        ", 
+       RowBox[{"gPairs", " ", "=", " ", 
+        RowBox[{"mapPairs", " ", "/.", " ", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"a_Integer", ",", " ", "b_Integer"}], "}"}], " ", "->", 
+          " ", 
+          RowBox[{"g", "[", 
+           RowBox[{"a", ",", " ", "b"}], "]"}]}]}]}], ";", "\n", "\n", 
+       "        ", 
+       RowBox[{"(", "\n", "            ", 
+        RowBox[{
+         RowBox[{"f", " ", "[", 
+          RowBox[{"{", "\n", "                    ", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"g", "[", 
+               RowBox[{"a1_", ",", " ", "a2_"}], "]"}], ",", " ", 
+              RowBox[{"g", "[", 
+               RowBox[{"b1_", ",", " ", "b2_"}], "]"}], ",", " ", 
+              RowBox[{"g", "[", 
+               RowBox[{"c1_", ",", " ", "c2_"}], "]"}]}], "}"}], ",", "\n", 
+            "                    ", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"g", "[", 
+               RowBox[{"d1_", ",", " ", "d2_"}], "]"}], ",", " ", 
+              RowBox[{"g", "[", 
+               RowBox[{"e1_", ",", " ", "e2_"}], "]"}], ",", " ", 
+              RowBox[{"g", "[", 
+               RowBox[{"f1_", ",", " ", "f2_"}], "]"}]}], "}"}], ",", "\n", 
+            "                    ", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"g", "[", 
+               RowBox[{"g1_", ",", " ", "g2_"}], "]"}], ",", " ", 
+              RowBox[{"g", "[", 
+               RowBox[{"h1_", ",", " ", "h2_"}], "]"}], ",", " ", 
+              RowBox[{"g", "[", 
+               RowBox[{"i1_", ",", " ", "i2_"}], "]"}]}], "}"}]}], "\n", 
+           "                ", "}"}], "]"}], " ", ":=", "\n", "            ", 
+         "\n", "                ", 
+         RowBox[{"Module", " ", "[", "\n", "                    ", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"highest", ",", " ", "nsecurity"}], "}"}], ",", "\n", 
+           "                    ", 
+           RowBox[{"If", " ", "[", "\n", "                        ", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"numberOfCells", "[", 
+                RowBox[{"[", "e1", "]"}], "]"}], " ", ">", " ", "1"}], " ", "&&",
+               " ", 
+              RowBox[{"e1", " ", "=!=", " ", "0"}]}], ",", "\n", "\n", 
+             "                        ", 
+             RowBox[{
+              RowBox[{"highest", " ", "=", " ", 
+               RowBox[{
+               "First", " ", "[", "\n", "                            ", 
+                RowBox[{
+                "Sort", " ", "[", "\n", "                                ", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                   "a1", ",", " ", "b1", ",", " ", "c1", ",", " ", "d1", ",", 
+                    " ", "f1", ",", " ", "g1", ",", " ", "h1", ",", " ", 
+                    "i1"}], "}"}], ",", "\n", 
+                  "                                ", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"cellDensity", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"#1", "+", "1"}], "]"}], "]"}], " ", ">", " ", 
+                    RowBox[{"cellDensity", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"#2", "+", "1"}], "]"}], "]"}]}], "&"}]}], "\n", 
+                 "                            ", "]"}], "\n", 
+                "                        ", "]"}]}], ";", "\n", 
+              "                        ", 
+              RowBox[{"nsecurity", " ", "=", " ", 
+               RowBox[{
+               "RandomChoice", " ", "[", "\n", "                            ", 
+                RowBox[{
+                "Cases", " ", "[", "\n", "                                ", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"a1", ",", " ", "a2"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"b1", ",", " ", "b2"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"c1", ",", " ", "c2"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"f1", ",", " ", "f2"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"i1", ",", " ", "i2"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"h1", ",", " ", "h2"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"g1", ",", " ", "g2"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"d1", ",", " ", "d2"}], "}"}]}], "}"}], ",", "\n",
+                   "                                ", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"highest", ",", " ", "s_"}], "}"}], " ", "->", 
+                   " ", "s"}], ",", "\n", "                                ", 
+                  RowBox[{"{", "1", "}"}], ",", "\n", 
+                  "                                ", "1"}], "\n", 
+                 "                            ", "]"}], "\n", 
+                "                        ", "]"}]}], ";", "\n", 
+              "                        ", 
+              RowBox[{"If", " ", "[", "\n", "                            ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"cellDensity", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"highest", "+", "1"}], "]"}], "]"}], " ", ">", 
+                    " ", 
+                    RowBox[{"cellDensity", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"e1", "+", "1"}], "]"}], "]"}]}], " ", "&&", " ", 
+                   RowBox[{"e2", " ", "<", " ", "12"}]}], ")"}], " ", "||", 
+                 " ", 
+                 RowBox[{"e2", " ", "<", " ", "8"}]}], ",", "\n", 
+                "                            ", 
+                RowBox[{"g", "[", 
+                 RowBox[{"highest", ",", " ", "e2"}], "]"}], ",", "\n", 
+                "                            ", 
+                RowBox[{"g", "[", 
+                 RowBox[{"e1", ",", " ", "e2"}], "]"}]}], "\n", 
+               "                        ", "]"}]}], ",", "\n", "\n", 
+             "                        ", 
+             RowBox[{"g", "[", 
+              RowBox[{"e1", ",", "e2"}], "]"}]}], "\n", 
+            "                     ", "]"}]}], "\n", "                ", 
+          "]"}]}], "\n", "        ", ")"}], ";", "\n", "        ", 
+       RowBox[{"(", "\n", "            ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"regionStep", "[", "gPairs_", "]"}], " ", ":=", " ", "\n", 
+          "                ", 
+          RowBox[{"BlockMap", " ", "[", "\n", "                    ", 
+           RowBox[{"f", ",", "\n", "                    ", 
+            RowBox[{"ArrayPad", "[", 
+             RowBox[{"gPairs", ",", " ", "1", ",", " ", 
+              RowBox[{"g", "[", 
+               RowBox[{"0", ",", " ", "0"}], "]"}]}], "]"}], ",", "\n", 
+            "                    ", 
+            RowBox[{"{", 
+             RowBox[{"3", ",", "3"}], "}"}], ",", "\n", 
+            "                    ", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "1"}], "}"}]}], "\n", "                ", 
+           "]"}]}], ";", "\n", "\n", "            ", 
+         RowBox[{
+          RowBox[{"recalcSecurities", "[", "gPairs_", "]"}], " ", ":=", " ", 
+          "\n", "                ", 
+          RowBox[{"BlockMap", " ", "[", "\n", "                    ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"g", " ", "[", "\n", "                        ", 
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", 
+                 RowBox[{"2", ",", "2"}], "]"}], "]"}], ",", "\n", 
+               "                        ", 
+               RowBox[{
+                RowBox[{"3", "*", 
+                 RowBox[{
+                 "Count", " ", "[", "\n", "                            ", 
+                  RowBox[{
+                   RowBox[{
+                   "Position", " ", "[", "\n", 
+                    "                                ", 
+                    RowBox[{
+                    RowBox[{"Flatten", "[", "#", "]"}], ",", "\n", 
+                    "                                ", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"2", ",", "2"}], "]"}], "]"}]}], "\n", 
+                    "                            ", "]"}], ",", "\n", 
+                   "                            ", 
+                   RowBox[{"_", "?", "EvenQ"}], ",", "\n", 
+                   "                            ", "2"}], "\n", 
+                  "                        ", "]"}]}], " ", "\n", 
+                "                        ", "+", " ", "\n", 
+                "                        ", 
+                RowBox[{
+                "Count", " ", "[", "\n", "                            ", 
+                 RowBox[{
+                  RowBox[{
+                  "Position", " ", "[", "\n", 
+                   "                                ", 
+                   RowBox[{
+                    RowBox[{"Flatten", "[", "#", "]"}], ",", "\n", 
+                    "                                ", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"2", ",", "2"}], "]"}], "]"}]}], "\n", 
+                   "                            ", "]"}], ",", "\n", 
+                  "                            ", 
+                  RowBox[{"_", "?", "OddQ"}], ",", "\n", 
+                  "                            ", "2"}], "\n", 
+                 "                        ", "]"}], " ", "-", " ", "1"}]}], 
+              "\n", "                    ", "]"}], "&"}], ",", "\n", 
+            "                    ", 
+            RowBox[{"ArrayPad", "[", 
+             RowBox[{
+              RowBox[{"gPairs", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", " ", "All", ",", " ", "1"}], "]"}], "]"}],
+               ",", " ", "1", ",", " ", "\"\<-\>\""}], "]"}], ",", "\n", 
+            "                    ", 
+            RowBox[{"{", 
+             RowBox[{"3", ",", "3"}], "}"}], ",", "\n", 
+            "                    ", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "1"}], "}"}]}], "\n", "                ", 
+           "]"}]}], ";", "\n", "\n", "            ", 
+         RowBox[{
+          RowBox[{"recalcDensities", "[", "gPairs_", "]"}], " ", ":=", " ", 
+          RowBox[{"Module", " ", "[", "\n", "                ", 
+           RowBox[{
+            RowBox[{"{", "numberOfCells", "}"}], ",", "\n", 
+            "                ", 
+            RowBox[{
+             RowBox[{"numberOfCells", " ", "=", " ", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"Count", "[", 
+                  RowBox[{
+                   RowBox[{"gPairs", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"All", ",", " ", "All", ",", " ", "1"}], "]"}], 
+                    "]"}], ",", " ", "#", ",", " ", "2"}], "]"}], ")"}], 
+                "&"}], " ", "/@", " ", "regions"}]}], ";", "\n", 
+             "                ", 
+             RowBox[{"cellDensity", " ", "=", " ", 
+              RowBox[{"N", "[", 
+               RowBox[{"Prepend", "[", 
+                RowBox[{
+                 RowBox[{"population", " ", "/", " ", 
+                  RowBox[{"(", 
+                   RowBox[{"numberOfCells", " ", "+", " ", "1"}], ")"}]}], 
+                 ",", " ", "0"}], "]"}], "]"}]}]}]}], "\n", "            ", 
+           "]"}]}], ";"}], "\n", "        ", ")"}], ";", "\n", "        ", 
+       "\n", "        ", 
+       RowBox[{"steps1", " ", "=", " ", 
+        RowBox[{"NestList", " ", "[", "\n", "            ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", "\n", "                ", 
+            RowBox[{
+             RowBox[{"recalcDensities", "[", "#", "]"}], ";", "\n", 
+             "                ", 
+             RowBox[{"recalcSecurities", "[", 
+              RowBox[{"regionStep", "[", "#", "]"}], "]"}]}], "\n", 
+            "            ", ")"}], "&"}], ",", "\n", "            ", "gPairs",
+           ",", "\n", "            ", "numberOfIterations"}], "\n", 
+         "        ", "]"}]}], ";", "\n", "        ", 
+       RowBox[{"If", "[", "\[IndentingNewLine]", "\t", 
+        RowBox[{"plotAll", ",", "\[IndentingNewLine]", "          ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"ArrayPlot", "[", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", " ", "All", ",", " ", "1"}], "]"}], "]"}], 
+            "]"}], "&"}], " ", "/@", " ", "steps1"}], ",", "\n", 
+         "                 ", 
+         RowBox[{"ArrayPlot", "[", 
+          RowBox[{
+           RowBox[{"Last", "[", "steps1", "]"}], "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", " ", "All", ",", " ", "1"}], "]"}], "]"}], 
+          "]"}]}], "\[IndentingNewLine]", "      ", "]"}]}]}], "\n", 
+     "                ", "]"}]}], ";"}], "\n", "    ", "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Cartogram", "[", 
+    RowBox[{"geoPolys_", ",", " ", "opts___"}], "]"}], " ", ":=", " ", "\n", 
+   "    ", 
+   RowBox[{"Cartogram", " ", "[", "\n", "        ", 
+    RowBox[{
+     RowBox[{"Normal", " ", "[", "\n", "            ", 
+      RowBox[{"EntityValue", " ", "[", "\n", "                ", 
+       RowBox[{
+       "geoPolys", ",", "\n", "                ", "\"\<Population\>\"", ",", 
+        "\n", "                ", "\"\<EntityAssociation\>\""}], "\n", 
+       "            ", "]"}], "\n", "        ", "]"}], ",", "\n", "        ", 
+     "opts"}], "\n", "    ", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7716085759801235`*^9, 3.771608617900981*^9}, {
+  3.7716086760923533`*^9, 3.771608702539609*^9}, {3.771608774430252*^9, 
+  3.7716087810635076`*^9}, {3.7716217777487907`*^9, 3.7716218711918736`*^9}, {
+  3.771621912891271*^9, 3.771621941212994*^9}, {3.7716221923819003`*^9, 
+  3.771622222782575*^9}, {3.771622393556243*^9, 3.7716224075458198`*^9}, {
+  3.7716225825343313`*^9, 3.771622613430716*^9}, {3.771622838737547*^9, 
+  3.77162286799229*^9}, {3.771623071449986*^9, 3.7716230879798145`*^9}},
+ EmphasizeSyntaxErrors->
+  True,ExpressionUUID->"778d4e0d-0f27-453f-a81e-d4d9662e4b72"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.771622802447583*^9, 3.7716228187799387`*^9}, {
+  3.7716229363314753`*^9, 
+  3.771622938494689*^9}},ExpressionUUID->"f09702c1-ed14-4de7-b042-\
+f6f5aaaba608"],
+
+Cell[BoxData[
+ RowBox[{"Cartogram", "[", 
+  TemplateBox[{"\"Central Europe\"",RowBox[{"EntityClass", "[", 
+      RowBox[{"\"Country\"", ",", "\"CentralEurope\""}], "]"}],
+    "\"EntityClass[\\\"Country\\\", \\\"CentralEurope\\\"]\"","\"countries\""},
+   "EntityClass"], "]"}]], "Output",
+ CellChangeTimes->{3.7716228204963427`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"60aff731-ddb0-40ac-9f40-5419748ebc73"]
+}, Open  ]]
+},
+WindowSize->{1264, 637},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>0.9 Inherited,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 11, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[561, 20, 22708, 481, 3213, "Input",ExpressionUUID->"778d4e0d-0f27-453f-a81e-d4d9662e4b72"],
+Cell[CellGroupData[{
+Cell[23294, 505, 205, 4, 26, "Input",ExpressionUUID->"f09702c1-ed14-4de7-b042-f6f5aaaba608"],
+Cell[23502, 511, 409, 7, 42, "Output",ExpressionUUID->"60aff731-ddb0-40ac-9f40-5419748ebc73"]
+}, Open  ]]
+}
+]
+*)
+
